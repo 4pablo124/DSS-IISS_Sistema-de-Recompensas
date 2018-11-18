@@ -18,7 +18,7 @@ Desarrollado por **Alejandro Romero Navarrete** y **Pablo de los Ríos Gestoso**
 
 ## Diagramas de Clases (UML)
 
-​	![Diseño Preliminar](/home/sakurariel/GDrive/Universidad/Tercero/1º Semestre/DSS/Practicas/DSS-IISS_Sistema-de-Recompensas/Diseño_Preliminar.png)
+​	![Diseño Preliminar](Disenyo_Preliminar.png)
 
 
 
