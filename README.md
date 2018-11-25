@@ -21,7 +21,7 @@ Desarrollado por **Alejandro Romero Navarrete** y **Pablo de los Ríos Gestoso**
 ### Diseño preliminar
 ​	![Diseño Preliminar](Disenyo_Preliminar.png)
 
-### Diseño con patrones
+### Diseño con patrones (incompleto)
 ​	![Diseño Patrones](diagrama.png)
 
 
