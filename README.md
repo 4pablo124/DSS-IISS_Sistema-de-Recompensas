@@ -22,7 +22,7 @@ Desarrollado por **Alejandro Romero Navarrete** y **Pablo de los Ríos Gestoso**
 ​	![Diseño Preliminar](Disenyo_Preliminar.png)
 
 ### Diseño con patrones
-​	![Diseño Patrones](Disenyo.png)
+​	![Diseño Patrones](diagrama.png)
 
 
 
