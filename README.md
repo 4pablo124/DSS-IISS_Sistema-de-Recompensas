@@ -7,10 +7,10 @@ Desarrollado por **Alejandro Romero Navarrete** y **Pablo de los Ríos Gestoso**
 ## Diagramas de Clases (UML)
 
 ### Diseño preliminar
-​	![Diseño Preliminar](Disenyo_Preliminar.png)
+​	![Diseño Preliminar](Disenyo/Disenyo_Preliminar.png)
 
 ### Diseño con patrones (incompleto)
-​	![Diseño Patrones](diagrama.png)
+​	![Diseño Patrones](Disenyo/Disenyo.png)
 
 
 
