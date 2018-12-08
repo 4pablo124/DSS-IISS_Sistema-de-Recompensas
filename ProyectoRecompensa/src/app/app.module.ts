@@ -7,10 +7,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { FlexLayoutModule } from "@angular/flex-layout";
 import 'hammerjs';
+import { ExpansionPanelComponent } from './expansion-panel/expansion-panel.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ExpansionPanelComponent,
+ 
   ],
   imports: [
     BrowserModule,
