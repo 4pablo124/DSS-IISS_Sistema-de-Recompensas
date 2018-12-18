@@ -1,18 +1,18 @@
-<mat-expansion-panel *ngFor="let menu of menu.options">
+<mat-expansion-panel *ngFor="let menu of menu.getOptions()">
   <mat-expansion-panel-header>
     <mat-panel-title>
-      {{menu.name}}
+      {{menu.getName()}}
     </mat-panel-title>
   </mat-expansion-panel-header>
 
-  <mat-expansion-panel *ngFor="let menu of menu.options">
+  <mat-expansion-panel *ngFor="let menu of menu.getOptions()">
     <mat-expansion-panel-header>
       <mat-panel-title>
-        {{menu.name}}
+        {{menu.getName()}}
       </mat-panel-title>
     </mat-expansion-panel-header>
 
-      <p>... Insertar funcionalidad con 'action()' :)</p>
+    <p>... Insertar funcionalidad con 'menu.action()' :)</p>
 
   </mat-expansion-panel>
 </mat-expansion-panel>

@@ -8,8 +8,9 @@ import { MatToolbarModule } from "@angular/material/toolbar";
 import { FlexLayoutModule } from "@angular/flex-layout";
 import 'hammerjs';
 import { MenuComponent } from './menu/menu.component';
-import {MatExpansionModule} from '@angular/material/expansion';
+import { MatExpansionModule } from '@angular/material/expansion';
 
+import { MenuService } from './services/menu.service';
 
 
 @NgModule({
@@ -25,7 +26,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
     FlexLayoutModule,
     MatExpansionModule
   ],
-  providers: [],
+  providers: [MenuService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
