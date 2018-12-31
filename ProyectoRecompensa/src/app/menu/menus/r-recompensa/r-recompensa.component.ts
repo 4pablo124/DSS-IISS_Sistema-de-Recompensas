@@ -9,7 +9,7 @@ import { MenuEspecificoComponent } from "../menu-especifico/menu-especifico.comp
 export class RRecompensaComponent extends MenuEspecificoComponent {
   constructor() {
     super();
-    this.name = "Consultar datos de un Recompensa";
+    this.name = "Consultar datos de una Recompensa";
     this.route = "rRecompensa";
   }
 

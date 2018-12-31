@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { MenuEspecificoComponent } from "../menu-especifico/menu-especifico.component";
+import { sDificultad } from '../../../clases/enumerados';
 
 @Component({
   selector: 'app-c-recompensa',
@@ -8,9 +9,10 @@ import { MenuEspecificoComponent } from "../menu-especifico/menu-especifico.comp
 })
 
 export class CRecompensaComponent extends MenuEspecificoComponent {
+  dificultades = sDificultad;
   constructor() {
     super();
-    this.name = "Añadir nuevo Recompensa";
+    this.name = "Añadir nueva Recompensa";
     this.route = "cRecompensa";
   }
 

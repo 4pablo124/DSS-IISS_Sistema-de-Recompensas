@@ -22,6 +22,29 @@ export enum Genero
     Unico
 }
 
+ export const sGenero = [
+    "Accion",
+    "Adultos",
+    "Aventura",
+    "Arcade",
+    "Agilidad Mental",
+    "Casual",
+    "Educativo",
+    "Familia",
+    "Lucha",
+    "Fitness",
+    "Horror",
+    "Musica y Ritmo",
+    "Grupo",
+    "Puzzle",
+    "Carreras",
+    "Juegos de Rol",
+    "Shooter",
+    "Simulador",
+    "Estrategia",
+    "Unico"
+]
+
 export enum Dispositivo
 {
     PS3,
@@ -32,10 +55,26 @@ export enum Dispositivo
     PC
 }
 
+export const sDispositivo = [
+    "PS3",
+    "PS4",
+    "PSVita",
+    "Xbox360",
+    "XboxOne",
+    "PC"
+]
+
 export enum Dificultad
 {
     Facil,
     Medio,
-    Dificl,
+    Dificil,
     Extremo
 }
+
+export const sDificultad = [
+    "Facil",
+    "Medio",
+    "Dificil",
+    "Extremo"
+]

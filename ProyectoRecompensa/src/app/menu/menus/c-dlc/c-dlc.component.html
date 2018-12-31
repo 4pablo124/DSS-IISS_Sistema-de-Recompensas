@@ -1,3 +1,25 @@
-<p>
-  c-dlc works!
-</p>
+<form novalidate (ngSubmit)="onSubmit()">
+    <p>
+      <mat-form-field>
+        <input matInput placeholder="Título">
+      </mat-form-field>
+    </p>
+  
+    <p>
+      <mat-form-field>
+        <textarea matInput placeholder="Descripción"></textarea>
+      </mat-form-field>
+    </p>
+
+    <p>
+      <mat-form-field>
+        <input matInput placeholder="Videojuego">
+      </mat-form-field>
+    </p>
+    
+    <p> 
+      <button type="submit" mat-flat-button>Guardar Cambios</button>
+    </p>
+  
+  </form>
+  

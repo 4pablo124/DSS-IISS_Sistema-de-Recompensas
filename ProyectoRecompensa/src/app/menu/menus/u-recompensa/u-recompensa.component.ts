@@ -10,7 +10,7 @@ export class URecompensaComponent extends MenuEspecificoComponent {
 
   constructor() {
     super();
-    this.name = "Editar datos de un Recompensa";
+    this.name = "Editar datos de una Recompensa";
     this.route = "uRecompensa";
   }
 

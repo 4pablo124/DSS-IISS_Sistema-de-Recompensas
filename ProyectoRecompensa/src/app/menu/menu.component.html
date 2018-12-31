@@ -1,11 +1,11 @@
 <mat-tab-group >
   <mat-tab *ngFor="let tab of menu.getOptions()" label={{tab.getName()}}>
-   <mat-card >
-     <mat-card-title mat-button *ngFor="let option of tab.getOptions()">
-        <a mat-button routerLink={{option.getRoute()}}>
-            {{option.getName()}}
-         </a>
-     </mat-card-title>
+    <mat-card>
+      <mat-chip-list class="mat-chip-list-stacked">
+        <mat-chip *ngFor="let option of tab.getOptions()" routerLink={{option.getRoute()}}>
+          {{option.getName()}}
+        </mat-chip>
+      </mat-chip-list>
     </mat-card>
   </mat-tab>
 

@@ -10,8 +10,16 @@ import 'hammerjs';
 import { MenuComponent } from './menu/menu.component';
 import { MatTabsModule}  from '@angular/material/tabs';
 import { MatButtonModule } from '@angular/material/button';
+import { MatChipsModule } from '@angular/material/chips';
 import { MatCardModule } from '@angular/material/card';
-import {MatExpansionModule} from '@angular/material/expansion';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+
+
+
+
 
 
 
@@ -30,6 +38,8 @@ import { URecompensaComponent } from './menu/menus/u-recompensa/u-recompensa.com
 import { UVideojuegoComponent } from './menu/menus/u-videojuego/u-videojuego.component';
 import { MenuEspecificoComponent } from './menu/menus/menu-especifico/menu-especifico.component';
 import { MenuGenericoComponent } from './menu/menus/menu-generico/menu-generico.component';
+
+
 
 import { AppRoutingModule } from "./app-routing/app-routing.module";
 
@@ -60,8 +70,12 @@ import { AppRoutingModule } from "./app-routing/app-routing.module";
     FlexLayoutModule,
     MatTabsModule,
     MatButtonModule,
+    MatChipsModule,
     MatCardModule,
     MatExpansionModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
     AppRoutingModule
   ],
   providers: [MenuService],
