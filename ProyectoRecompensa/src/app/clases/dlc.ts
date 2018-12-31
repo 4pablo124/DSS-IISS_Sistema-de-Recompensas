@@ -1,9 +1,7 @@
-import { enumerados } from 'enumerados';
-
 export class DLC
 {
-    private titulo: string;
-    private descripcion: string;
+    private _titulo: string;
+    private _descripcion: string;
 
     constructor(titulo: string, descripcion: string)
     {
@@ -11,9 +9,9 @@ export class DLC
         this.descripcion = descripcion;
     }
 
-    get titulo(): string {return this.titulo;}
-    get descripcion(): string {return this.descripcion;}
+    get titulo(): string {return this._titulo;}
+    get descripcion(): string {return this._descripcion;}
 
-    set titulo(titulo: string) {this.titulo = titulo;}
-    set descripcion(descripcion: string) {this.descripcion = descripcion;}
+    set titulo(titulo: string) {this._titulo = titulo;}
+    set descripcion(descripcion: string) {this._descripcion = descripcion;}
 }

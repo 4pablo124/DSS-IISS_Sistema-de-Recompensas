@@ -1,4 +1,4 @@
-enum Genero
+export enum Genero
 {
     Accion,
     Adultos,
@@ -22,7 +22,7 @@ enum Genero
     Unico
 }
 
-enum Dispositivo
+export enum Dispositivo
 {
     PS3,
     PS4,
@@ -32,7 +32,7 @@ enum Dispositivo
     PC
 }
 
-enum Dificultad
+export enum Dificultad
 {
     Facil,
     Medio,
