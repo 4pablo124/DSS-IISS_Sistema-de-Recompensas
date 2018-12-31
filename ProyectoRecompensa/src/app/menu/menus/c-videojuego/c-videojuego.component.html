@@ -1,19 +1,23 @@
 <form novalidate (ngSubmit)="onSubmit()">
     <p>
       <mat-form-field>
-        <input matInput placeholder="Título">
+        <input matInput placeholder="Título"
+        name="titulo" #titulo="ngModel" type="text" [(ngModel)]="videojuego.titulo">
       </mat-form-field>
     </p>
   
     <p>
       <mat-form-field>
-        <textarea matInput placeholder="Descripción"></textarea>
+        <textarea matInput placeholder="Descripción"
+        name="descripcion" #descripcion="ngModel" type="text" [(ngModel)]="videojuego.descripcion">
+      </textarea>
       </mat-form-field>
     </p>
     
     <p>
       <mat-form-field>
-        <mat-select placeholder="Género">
+        <mat-select placeholder="Género"
+        name="genero" #genero="ngModel" type="text" [(ngModel)]="videojuego.genero">
           <mat-option *ngFor="let genero of generos" [value]="genero">
             {{genero}}
           </mat-option>
@@ -23,7 +27,8 @@
 
     <p>
       <mat-form-field>
-        <mat-select placeholder="Dispositivo">
+        <mat-select placeholder="Dispositivo"
+        name="dispositivo" #dispositivo="ngModel" type="text" [(ngModel)]="videojuego.dispositivo">
           <mat-option *ngFor="let dispositivo of dispositivos" [value]="dispositivo">
             {{dispositivo}}
           </mat-option>
@@ -31,9 +36,14 @@
       </mat-form-field>
     </p>
     
-    <p> 
-      <button type="submit" mat-flat-button>Guardar Cambios</button>
-    </p>
+    <div>
+      <span>
+        <button mat-button routerLink="/menu">Cancelar</button>
+      </span>
+      <span >
+        <button type="submit" mat-flat-button>Aceptar</button>
+      </span>
+    </div>
   
   </form>
   

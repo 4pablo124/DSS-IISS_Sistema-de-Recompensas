@@ -7,6 +7,8 @@ import { MenuEspecificoComponent } from "../menu-especifico/menu-especifico.comp
   styleUrls: ['./c-jugador.component.scss']
 })
 export class CJugadorComponent extends MenuEspecificoComponent {
+  jugador = {nombre:'', apelllidos:'', nickname:'', email:'', fNacimiento:'' };
+
   constructor() {
     super();
     this.name = "Añadir nuevo Jugador";

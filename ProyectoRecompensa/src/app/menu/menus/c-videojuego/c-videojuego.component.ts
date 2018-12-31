@@ -11,6 +11,8 @@ import { sGenero, sDispositivo } from '../../../clases/enumerados'
 export class CVideojuegoComponent extends MenuEspecificoComponent {
   generos = sGenero;
   dispositivos = sDispositivo;
+  videojuego = {titulo:'', descripcion:'', genero:'', dispositivo:''};
+  
   constructor() {
     super();
     this.name = "Añadir nuevo Videojuego";

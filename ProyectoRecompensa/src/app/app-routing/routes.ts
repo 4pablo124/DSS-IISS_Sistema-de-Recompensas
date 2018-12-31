@@ -33,5 +33,6 @@ export const routes: Routes = [
     { path: 'cRecompensa', component: CRecompensaComponent },
     { path: 'rRecompensa', component: RRecompensaComponent },
     { path: 'uRecompensa', component: URecompensaComponent },
-    { path: 'dRecompensa', component: DRecompensaComponent }
+    { path: 'dRecompensa', component: DRecompensaComponent },
+    { path: '', redirectTo: '/menu', pathMatch: 'full' }
 ];

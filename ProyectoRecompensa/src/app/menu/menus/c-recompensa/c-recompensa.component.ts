@@ -10,6 +10,8 @@ import { sDificultad } from '../../../clases/enumerados';
 
 export class CRecompensaComponent extends MenuEspecificoComponent {
   dificultades = sDificultad;
+  recompensa = {titulo:'', descripcion:'', dificultad:'', videojuego:''};
+  
   constructor() {
     super();
     this.name = "Añadir nueva Recompensa";

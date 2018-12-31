@@ -1,25 +1,29 @@
-<form novalidate (ngSubmit)="onSubmit()">
+<form>
     <p>
       <mat-form-field>
-        <input matInput placeholder="Título">
+        <input matInput placeholder="Título"
+        name="titulo" #titulo="ngModel" type="text" [(ngModel)]="dlc.titulo">
       </mat-form-field>
     </p>
   
     <p>
       <mat-form-field>
-        <textarea matInput placeholder="Descripción"></textarea>
+        <textarea matInput placeholder="Descripción"
+        name="descripcion" #descripcion="ngModel" type="text" [(ngModel)]="dlc.descripcion">
+        </textarea>
       </mat-form-field>
     </p>
 
     <p>
       <mat-form-field>
-        <input matInput placeholder="Videojuego">
+        <input matInput placeholder="Videojuego"
+        name="videojuego" #videojuego="ngModel" type="text" [(ngModel)]="dlc.videojuego">
       </mat-form-field>
     </p>
-    
-    <p> 
-      <button type="submit" mat-flat-button>Guardar Cambios</button>
-    </p>
+
+    <div>
+        <button mat-button routerLink="/menu">Cancelar</button>
+        <button mat-flat-button>Aceptar</button>
+    </div>
   
   </form>
-  
