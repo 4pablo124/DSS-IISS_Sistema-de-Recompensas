@@ -16,6 +16,6 @@ export class CJugadorComponent extends MenuEspecificoComponent {
   }
 
   action() {
-      // Usar command (?)
+      this.command.execute(this.jugador);
   }
 }

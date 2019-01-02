@@ -19,6 +19,6 @@ export class CRecompensaComponent extends MenuEspecificoComponent {
   }
 
   action() {
-      // Usar command (?)
+      this.command.execute(this.recompensa);
   }
 }

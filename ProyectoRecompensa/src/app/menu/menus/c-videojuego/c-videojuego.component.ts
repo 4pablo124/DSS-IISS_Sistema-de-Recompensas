@@ -21,6 +21,6 @@ export class CVideojuegoComponent extends MenuEspecificoComponent {
   
 
   action() {
-      // Usar command (?)
+      this.command.execute(this.videojuego);
   }
 }

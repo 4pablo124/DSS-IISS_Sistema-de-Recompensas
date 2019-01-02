@@ -10,6 +10,7 @@ import { MenuEspecificoComponent } from "../menu-especifico/menu-especifico.comp
 
 export class CDLCComponent extends MenuEspecificoComponent {
   dlc = {titulo: '', descripcion: '', videojuego: ''};
+  
   constructor() {
     super();
     this.name = "Añadir nuevo DLC";
@@ -17,7 +18,7 @@ export class CDLCComponent extends MenuEspecificoComponent {
   }
 
   action() {
-      
+      this.command.execute(this.dlc);
   }
 
   onSubmit(){

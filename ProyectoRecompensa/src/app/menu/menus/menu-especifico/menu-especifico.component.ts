@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { iMenu } from "../iMenu";
+import { iCommand } from "../../../clases/Command/iCommand"
 
 
 @Component({
@@ -13,6 +14,7 @@ export class MenuEspecificoComponent implements iMenu {
   protected name: string;
   protected options: iMenu[];
   protected route: string;
+  protected command: iCommand;
 
   constructor() {};
 
@@ -38,6 +40,10 @@ export class MenuEspecificoComponent implements iMenu {
 
   setOptions(options: iMenu[]): void {
     this.options = options;
+  }
+
+  setOptions(command: iCommand): void {
+    this.command = command;
   }
 
   action(){}

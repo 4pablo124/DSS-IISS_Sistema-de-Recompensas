@@ -1,4 +1,4 @@
 export interface iCommand
 {
-    execute(): void;
+    execute(datos: any): void;
 }
