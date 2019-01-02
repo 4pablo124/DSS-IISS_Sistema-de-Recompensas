@@ -1,6 +1,6 @@
 import { iCommand } from '../iCommand';
 
-export class Command_C_Videojuego implements iCommand
+export class Command_C_Jugador implements iCommand
 {
     execute():void{}
 }

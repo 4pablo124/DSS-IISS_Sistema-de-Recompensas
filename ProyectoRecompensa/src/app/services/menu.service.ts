@@ -15,6 +15,19 @@ import { RRecompensaComponent } from '../menu/menus/r-recompensa/r-recompensa.co
 import { URecompensaComponent } from '../menu/menus/u-recompensa/u-recompensa.component';
 import { DRecompensaComponent } from '../menu/menus/d-recompensa/d-recompensa.component';
 
+import { Command_C_DLC } from "../clases/Command/Commands/Command_C_DLC";
+import { Command_C_Jugador } from "../clases/Command/Commands/Command_C_Jugador";
+import { Command_C_Recompensa } from "../clases/Command/Commands/Command_C_Recompensa";
+import { Command_C_Videojuego } from "../clases/Command/Commands/Command_C_Videojuego";
+import { Command_D_Recompensa } from "../clases/Command/Commands/Command_D_Recompensa";
+import { Command_D_Videojuego } from "../clases/Command/Commands/Command_D_Videojuego";
+import { Command_R_DLC } from "../clases/Command/Commands/Command_R_DLC";
+import { Command_R_Jugador } from "../clases/Command/Commands/Command_R_Jugador";
+import { Command_R_Recompensa } from "../clases/Command/Commands/Command_R_Recompensa";
+import { Command_R_Videojuego } from "../clases/Command/Commands/Command_R_Videojuego";
+import { Command_U_Recompensa } from "../clases/Command/Commands/Command_U_Recompensa";
+import { Command_U_Videojuego } from "../clases/Command/Commands/Command_U_Videojuego";
+
 
 @Injectable({
   providedIn: 'root'
@@ -30,42 +43,84 @@ export class MenuService {
     let menu_cr_dlc = new MenuGenericoComponent();
     menu_cr_dlc.setName("CR DLC");
     menu_cr_dlc.setRoute("/crDLC");
+
+      //comands
+    let menu_c_dlc = new CDLCComponent();
+    menu_c_dlc.setCommand(new Command_C_DLC());
+    let menu_r_dlc = new RDLCComponent();
+    menu_r_dlc.setCommand(new Command_R_DLC());
+
+      //options
     menu_cr_dlc.setOptions([
-      new CDLCComponent(),
-      new RDLCComponent()
+      menu_c_dlc,
+      menu_r_dlc
     ]);
 
-    // Jugador
+    // JUGADOR
     let menu_cr_jugador = new MenuGenericoComponent();
     menu_cr_jugador.setName("CR Jugador");
     menu_cr_jugador.setRoute("/crJugador");
+
+      //comands
+    let menu_c_jugador = new CJugadorComponent();
+    menu_c_jugador.setCommand(new Command_C_Jugador());
+    let menu_r_jugador = new RJugadorComponent();
+    menu_r_jugador.setCommand(new Command_R_Jugador());
+
+     //opciones
     menu_cr_jugador.setOptions([
-      new CJugadorComponent(),
-      new RJugadorComponent()
+      menu_c_jugador,
+      menu_r_jugador
     ]);
 
     // Videojuego
     let menu_crud_videojuego = new MenuGenericoComponent();
     menu_crud_videojuego.setName("CRUD Videojuego");
     menu_crud_videojuego.setRoute("/crudVideojuego");
+      
+      //comands
+    let menu_c_videojuego = new CVideojuegoComponent();
+    menu_c_videojuego.setCommand(new Command_C_Videojuego());
+    let menu_r_videojuego = new RVideojuegoComponent();
+    menu_r_videojuego.setCommand(new Command_R_Videojuego());
+    let menu_u_videojuego = new UVideojuegoComponent();
+    menu_u_videojuego.setCommand(new Command_U_Videojuego());
+    let menu_d_videojuego = new DVideojuegoComponent();
+    menu_d_videojuego.setCommand(new Command_D_Videojuego());
+
+      //options
     menu_crud_videojuego.setOptions([
-      new CVideojuegoComponent(),
-      new RVideojuegoComponent(),
-      new UVideojuegoComponent(),
-      new DVideojuegoComponent()
+      menu_c_videojuego,
+      menu_r_videojuego,
+      menu_u_videojuego,
+      menu_d_videojuego
     ]);
 
-    // Recompensa
+    // RECOMPENSA
     let menu_crud_recompensa = new MenuGenericoComponent();
     menu_crud_recompensa.setName("CRUD Recompensa");
     menu_crud_recompensa.setRoute("/crudRecompensa");
+
+      //commands
+    let menu_c_recompensa = new CRecompensaComponent();
+    menu_c_recompensa.setCommand(new Command_C_Recompensa());
+    let menu_r_recompensa = new RRecompensaComponent();
+    menu_r_recompensa.setCommand(new Command_R_Recompensa());
+    let menu_u_recompensa = new URecompensaComponent();
+    menu_u_recompensa.setCommand(new Command_U_Recompensa());
+    let menu_d_recompensa = new DRecompensaComponent();
+    menu_d_recompensa.setCommand(new Command_D_Recompensa());
+
+      //opciones
     menu_crud_recompensa.setOptions([
-      new CRecompensaComponent(),
-      new RRecompensaComponent(),
-      new URecompensaComponent(),
-      new DRecompensaComponent()
+      menu_c_recompensa,
+      menu_r_recompensa,
+      menu_u_recompensa,
+      menu_d_recompensa
     ]);
-    // Menu Principal
+
+
+    // MENU PRINCIPAL
     let menuPrincipal = new MenuGenericoComponent();
     menuPrincipal.setName("Menu Principal");
     menuPrincipal.setRoute("menu");
