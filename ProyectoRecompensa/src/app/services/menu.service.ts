@@ -15,10 +15,7 @@ import { RRecompensaComponent } from '../menu/menus/r-recompensa/r-recompensa.co
 import { URecompensaComponent } from '../menu/menus/u-recompensa/u-recompensa.component';
 import { DRecompensaComponent } from '../menu/menus/d-recompensa/d-recompensa.component';
 
-import { Command_C_DLC } from "../clases/Command/Commands/Command_C_DLC";
-import { Command_C_Jugador } from "../clases/Command/Commands/Command_C_Jugador";
-import { Command_C_Recompensa } from "../clases/Command/Commands/Command_C_Recompensa";
-import { Command_C_Videojuego } from "../clases/Command/Commands/Command_C_Videojuego";
+import { Command_Crear } from "../clases/Command/Commands/Command_Crear";
 import { Command_D_Recompensa } from "../clases/Command/Commands/Command_D_Recompensa";
 import { Command_D_Videojuego } from "../clases/Command/Commands/Command_D_Videojuego";
 import { Command_R_DLC } from "../clases/Command/Commands/Command_R_DLC";
@@ -28,6 +25,10 @@ import { Command_R_Videojuego } from "../clases/Command/Commands/Command_R_Video
 import { Command_U_Recompensa } from "../clases/Command/Commands/Command_U_Recompensa";
 import { Command_U_Videojuego } from "../clases/Command/Commands/Command_U_Videojuego";
 
+import { Factory_DLC } from "../clases/Factory/Factory_DLC";
+import { Factory_Jugador } from "../clases/Factory/Factory_Jugador";
+import { Factory_Recompensa } from "../clases/Factory/Factory_Recompensa";
+import { Factory_Videojuego } from "../clases/Factory/Factory_Videojuego";
 
 @Injectable({
   providedIn: 'root'
@@ -46,7 +47,7 @@ export class MenuService {
 
       //comands
     let menu_c_dlc = new CDLCComponent();
-    menu_c_dlc.setCommand(new Command_C_DLC());
+    menu_c_dlc.setCommand(new Command_Crear(new Factory_DLC()));
     let menu_r_dlc = new RDLCComponent();
     menu_r_dlc.setCommand(new Command_R_DLC());
 
@@ -63,7 +64,7 @@ export class MenuService {
 
       //comands
     let menu_c_jugador = new CJugadorComponent();
-    menu_c_jugador.setCommand(new Command_C_Jugador());
+    menu_c_jugador.setCommand(new Command_Crear(new Factory_Jugador()));
     let menu_r_jugador = new RJugadorComponent();
     menu_r_jugador.setCommand(new Command_R_Jugador());
 
@@ -80,7 +81,7 @@ export class MenuService {
       
       //comands
     let menu_c_videojuego = new CVideojuegoComponent();
-    menu_c_videojuego.setCommand(new Command_C_Videojuego());
+    menu_c_videojuego.setCommand(new Command_Crear(new Factory_Videojuego()));
     let menu_r_videojuego = new RVideojuegoComponent();
     menu_r_videojuego.setCommand(new Command_R_Videojuego());
     let menu_u_videojuego = new UVideojuegoComponent();
@@ -103,7 +104,7 @@ export class MenuService {
 
       //commands
     let menu_c_recompensa = new CRecompensaComponent();
-    menu_c_recompensa.setCommand(new Command_C_Recompensa());
+    menu_c_recompensa.setCommand(new Command_Crear(new Factory_Recompensa()));
     let menu_r_recompensa = new RRecompensaComponent();
     menu_r_recompensa.setCommand(new Command_R_Recompensa());
     let menu_u_recompensa = new URecompensaComponent();
