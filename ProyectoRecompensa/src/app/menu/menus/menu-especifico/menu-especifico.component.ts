@@ -42,7 +42,7 @@ export class MenuEspecificoComponent implements iMenu {
     this.options = options;
   }
 
-  setOptions(command: iCommand): void {
+  setCommand(command: iCommand): void {
     this.command = command;
   }
 
