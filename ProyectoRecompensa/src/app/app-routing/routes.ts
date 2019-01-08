@@ -14,6 +14,7 @@ import { CRecompensaComponent } from '../menu/menus/c-recompensa/c-recompensa.co
 import { RRecompensaComponent } from '../menu/menus/r-recompensa/r-recompensa.component';
 import { URecompensaComponent } from '../menu/menus/u-recompensa/u-recompensa.component';
 import { DRecompensaComponent } from '../menu/menus/d-recompensa/d-recompensa.component';
+import { NuevoJuegoComponent } from '../menu/menus/nuevo-juego/nuevo-juego.component';
 
 export const routes: Routes = [
     
@@ -34,5 +35,6 @@ export const routes: Routes = [
     { path: 'rRecompensa', component: RRecompensaComponent },
     { path: 'uRecompensa', component: URecompensaComponent },
     { path: 'dRecompensa', component: DRecompensaComponent },
+    { path: 'nuevoJuego', component: NuevoJuegoComponent},
     { path: '', redirectTo: '/menu', pathMatch: 'full' }
 ];

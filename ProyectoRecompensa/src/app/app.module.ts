@@ -43,6 +43,7 @@ import { MenuGenericoComponent } from './menu/menus/menu-generico/menu-generico.
 
 
 import { AppRoutingModule } from "./app-routing/app-routing.module";
+import { NuevoJuegoComponent } from './menu/menus/nuevo-juego/nuevo-juego.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +62,8 @@ import { AppRoutingModule } from "./app-routing/app-routing.module";
     URecompensaComponent,
     UVideojuegoComponent,
     MenuEspecificoComponent,
-    MenuGenericoComponent
+    MenuGenericoComponent,
+    NuevoJuegoComponent
  
   ],
   imports: [
