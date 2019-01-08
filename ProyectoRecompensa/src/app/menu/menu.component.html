@@ -1,19 +1,39 @@
-<mat-tab-group >
-  <mat-tab *ngFor="let tab of menu.getOptions()" label={{tab.getName()}}>
+<div class="container" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="flex-start">
+  <div>
     <mat-card>
-      <mat-chip-list class="mat-chip-list-stacked">
-        <mat-chip *ngFor="let option of tab.getOptions()" routerLink={{option.getRoute()}}>
-          {{option.getName()}}
-        </mat-chip>
-      </mat-chip-list>
+      <mat-card-title>
+        <button mat-button style="font-size:25px" [routerLink]="menu.getRoute()">
+            {{menu.getName()}}
+        </button>
+      </mat-card-title>
+      <mat-accordion>
+        <mat-expansion-panel *ngFor="let menu of menu.getOptions()">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              {{menu.getName()}}
+            </mat-panel-title>  
+          </mat-expansion-panel-header>
+            
+            <mat-chip [routerLink]="menu.getRoute()" selected [color]="accent"
+            *ngIf="menu.getOptions()==null">
+              {{menu.getName()}}
+            </mat-chip>
+
+            <mat-chip-list class="mat-chip-list-stacked">
+              <mat-chip *ngFor="let menu of menu.getOptions()" [routerLink]="menu.getRoute()"
+              selected [color]="accent">
+                {{menu.getName()}}
+              </mat-chip>
+            </mat-chip-list>
+
+        </mat-expansion-panel>
+      </mat-accordion>      
     </mat-card>
-  </mat-tab>
-</mat-tab-group>
+  </div>
 
-
-<mat-card>
-    <router-outlet></router-outlet>
-</mat-card>
-
-
-
+  <div >
+    <mat-card>
+      <router-outlet></router-outlet>
+    </mat-card>
+  </div>
+</div>

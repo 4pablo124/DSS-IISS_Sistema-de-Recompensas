@@ -11,8 +11,8 @@ export class NuevaRecompensaComponent extends MenuEspecificoComponent {
   constructor() 
   { 
     super();
-    this.name = "Seleccionar nueva recompensa";
-    this.route = "nuevaRecompensa";
+    this.name = "Notificar obtención de recompensa de un videojuego";
+    this.route = "/nuevaRecompensa";
   }
 
   action() 

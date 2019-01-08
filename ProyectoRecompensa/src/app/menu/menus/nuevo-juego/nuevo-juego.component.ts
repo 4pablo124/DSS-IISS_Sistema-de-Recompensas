@@ -11,8 +11,8 @@ export class NuevoJuegoComponent extends MenuEspecificoComponent{
   constructor() 
   { 
     super();
-    this.name = "Seleccionar nuevo juego";
-    this.route = "nuevoJuego";
+    this.name = "Notificar nuevo jugador de un videojuego";
+    this.route = "/nuevoJuego";
   }
 
   action() 
