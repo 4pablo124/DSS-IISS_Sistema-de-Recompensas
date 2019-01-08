@@ -17,7 +17,7 @@ export class NuevoJuegoComponent extends MenuEspecificoComponent{
 
   action() 
   {
-   
+    //Command
   }
 
   onSubmit()

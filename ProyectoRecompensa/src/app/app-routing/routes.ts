@@ -23,6 +23,7 @@ export const routes: Routes = [
     { path: 'crDLC', component: MenuGenericoComponent },
     { path: 'crudVideojuego', component: MenuGenericoComponent },
     { path: 'crudRecompensa', component: MenuGenericoComponent },
+    { path: 'notificarNuevoJuego', component: MenuGenericoComponent },
     { path: 'cDLC', component: CDLCComponent },
     { path: 'rDLC', component: RDLCComponent },
     { path: 'cJugador', component: CJugadorComponent },
