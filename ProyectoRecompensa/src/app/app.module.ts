@@ -44,6 +44,7 @@ import { MenuGenericoComponent } from './menu/menus/menu-generico/menu-generico.
 
 import { AppRoutingModule } from "./app-routing/app-routing.module";
 import { NuevoJuegoComponent } from './menu/menus/nuevo-juego/nuevo-juego.component';
+import { NuevaRecompensaComponent } from './menu/menus/nueva-recompensa/nueva-recompensa.component';
 
 @NgModule({
   declarations: [
@@ -63,7 +64,8 @@ import { NuevoJuegoComponent } from './menu/menus/nuevo-juego/nuevo-juego.compon
     UVideojuegoComponent,
     MenuEspecificoComponent,
     MenuGenericoComponent,
-    NuevoJuegoComponent
+    NuevoJuegoComponent,
+    NuevaRecompensaComponent
  
   ],
   imports: [

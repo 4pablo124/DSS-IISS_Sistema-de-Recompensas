@@ -15,6 +15,7 @@ import { RRecompensaComponent } from '../menu/menus/r-recompensa/r-recompensa.co
 import { URecompensaComponent } from '../menu/menus/u-recompensa/u-recompensa.component';
 import { DRecompensaComponent } from '../menu/menus/d-recompensa/d-recompensa.component';
 import { NuevoJuegoComponent } from '../menu/menus/nuevo-juego/nuevo-juego.component';
+import { NuevaRecompensaComponent } from '../menu/menus/nueva-recompensa/nueva-recompensa.component';
 
 import { Command_Crear } from "../clases/Command/Commands/Command_Crear";
 import { Command_D_Recompensa } from "../clases/Command/Commands/Command_D_Recompensa";
@@ -133,6 +134,17 @@ export class MenuService {
     //opciones
     notificar_nuevo_juego.setOptions([menu_nuevo_juego]);
 
+    //NOTIFICAR NUEVO JUEGO
+    let notificar_nueva_recompensa = new MenuGenericoComponent();
+    notificar_nueva_recompensa.setName("Notificar obtención de recompensa de un videojuego");
+    notificar_nueva_recompensa.setRoute("/notificarNuevaRecompensa");
+
+    //commands
+    let menu_nueva_recompensa = new NuevaRecompensaComponent();
+    //menu_nueva_recompensa.setCommand(new Command_Nueva_Recompensa());
+    //opciones
+    notificar_nueva_recompensa.setOptions([menu_nueva_recompensa]);
+
 
     // MENU PRINCIPAL
     let menuPrincipal = new MenuGenericoComponent();
@@ -143,7 +155,8 @@ export class MenuService {
       menu_crud_videojuego,
       menu_crud_recompensa,
       menu_cr_dlc,
-      notificar_nuevo_juego
+      notificar_nuevo_juego,
+      notificar_nueva_recompensa
     ]);
 
     return menuPrincipal;
