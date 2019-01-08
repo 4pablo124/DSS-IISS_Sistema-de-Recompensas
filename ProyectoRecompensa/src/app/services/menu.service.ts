@@ -27,6 +27,7 @@ import { Command_R_Videojuego } from "../clases/Command/Commands/Command_R_Video
 import { Command_U_Recompensa } from "../clases/Command/Commands/Command_U_Recompensa";
 import { Command_U_Videojuego } from "../clases/Command/Commands/Command_U_Videojuego";
 import { Command_Nuevo_Juego } from "../clases/Command/Commands/Command_Nuevo_Juego";
+import { Command_Nueva_Recompensa } from "../clases/Command/Commands/Command_Nueva_Recompensa";
 
 import { Factory_DLC } from "../clases/Factory/Factory_DLC";
 import { Factory_Jugador } from "../clases/Factory/Factory_Jugador";
@@ -125,7 +126,7 @@ export class MenuService {
 
     //NOTIFICAR NUEVO JUEGO
     let notificar_nuevo_juego = new MenuGenericoComponent();
-    notificar_nuevo_juego.setName("Notificar nuevo juegador a videojuego");
+    notificar_nuevo_juego.setName("Notificar nuevo jugador a videojuego");
     notificar_nuevo_juego.setRoute("/notificarNuevoJuego");
 
     //commands
@@ -141,7 +142,7 @@ export class MenuService {
 
     //commands
     let menu_nueva_recompensa = new NuevaRecompensaComponent();
-    //menu_nueva_recompensa.setCommand(new Command_Nueva_Recompensa());
+    menu_nueva_recompensa.setCommand(new Command_Nueva_Recompensa());
     //opciones
     notificar_nueva_recompensa.setOptions([menu_nueva_recompensa]);
 
