@@ -125,26 +125,14 @@ export class MenuService {
     ]);
 
     //NOTIFICAR NUEVO JUEGO
-    let notificar_nuevo_juego = new MenuGenericoComponent();
-    notificar_nuevo_juego.setName("Notificar nuevo jugador a videojuego");
-    notificar_nuevo_juego.setRoute("/notificarNuevoJuego");
-
-    //commands
     let menu_nuevo_juego = new NuevoJuegoComponent();
     menu_nuevo_juego.setCommand(new Command_Nuevo_Juego());
-    //opciones
-    notificar_nuevo_juego.setOptions([menu_nuevo_juego]);
 
     //NOTIFICAR NUEVO JUEGO
-    let notificar_nueva_recompensa = new MenuGenericoComponent();
-    notificar_nueva_recompensa.setName("Notificar obtención de recompensa de un videojuego");
-    notificar_nueva_recompensa.setRoute("/notificarNuevaRecompensa");
 
     //commands
     let menu_nueva_recompensa = new NuevaRecompensaComponent();
     menu_nueva_recompensa.setCommand(new Command_Nueva_Recompensa());
-    //opciones
-    notificar_nueva_recompensa.setOptions([menu_nueva_recompensa]);
 
 
     // MENU PRINCIPAL
@@ -156,8 +144,8 @@ export class MenuService {
       menu_crud_videojuego,
       menu_crud_recompensa,
       menu_cr_dlc,
-      notificar_nuevo_juego,
-      notificar_nueva_recompensa
+      menu_nuevo_juego,
+      menu_nueva_recompensa
     ]);
 
     return menuPrincipal;
