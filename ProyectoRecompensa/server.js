@@ -13,6 +13,8 @@ mongoose.connect(config.DB).then(
 
 const app = express();
 
+const jugadorRoutes = require('./routes/jugador.route');
+
 app.use(bodyParser.json());
 app.use(cors());
 
