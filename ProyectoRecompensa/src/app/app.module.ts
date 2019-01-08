@@ -7,8 +7,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { FlexLayoutModule } from "@angular/flex-layout";
 import 'hammerjs';
-import { MenuComponent } from './menu/menu.component';
-import { MatTabsModule}  from '@angular/material/tabs';
 import { MatButtonModule } from '@angular/material/button';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatCardModule } from '@angular/material/card';
@@ -18,12 +16,7 @@ import { FormsModule , ReactiveFormsModule} from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 
-
-
-
-
-
-
+import { MenuComponent } from './menu/menu.component';
 import { MenuService } from './services/menu.service';
 import { CDLCComponent } from './menu/menus/c-dlc/c-dlc.component';
 import { CJugadorComponent } from './menu/menus/c-jugador/c-jugador.component';
@@ -73,7 +66,6 @@ import { NuevaRecompensaComponent } from './menu/menus/nueva-recompensa/nueva-re
     BrowserAnimationsModule,
     MatToolbarModule,
     FlexLayoutModule,
-    MatTabsModule,
     MatButtonModule,
     MatChipsModule,
     MatCardModule,
