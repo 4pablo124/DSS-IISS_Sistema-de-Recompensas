@@ -30,6 +30,8 @@ import { RudRecompensaFormComponent } from './menu/forms/rud-recompensa-form/rud
 import { RudVideojuegoFormComponent } from './menu/forms/rud-videojuego-form/rud-videojuego-form.component';
 import { MenuGenericoFormComponent } from './menu/forms/menu-generico-form/menu-generico-form.component';
 import { RVideojuegoFormComponent } from './menu/forms/r-videojuego-form/r-videojuego-form.component';
+import { UVideojuegoFormComponent } from './menu/forms/u-videojuego-form/u-videojuego-form.component';
+import { DVideojuegoFormComponent } from './menu/forms/d-videojuego-form/d-videojuego-form.component';
 
 
 
@@ -47,7 +49,9 @@ import { RVideojuegoFormComponent } from './menu/forms/r-videojuego-form/r-video
     RudRecompensaFormComponent,
     RudVideojuegoFormComponent,
     MenuGenericoFormComponent,
-    RVideojuegoFormComponent 
+    RVideojuegoFormComponent,
+    UVideojuegoFormComponent,
+    DVideojuegoFormComponent 
   ],
   imports: [
     BrowserModule,
