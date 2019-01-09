@@ -14,6 +14,9 @@ mongoose.connect(config.DB).then(
 const app = express();
 
 const jugadorRoutes = require('./routes/jugador.route');
+const videojuegoRoutes = require('./routes/videojuego.route');
+const dlcRoutes = require('./routes/dlc.route');
+const recompensaRoutes = require('./routes/recompensa.route');
 
 app.use(bodyParser.json());
 app.use(cors());
