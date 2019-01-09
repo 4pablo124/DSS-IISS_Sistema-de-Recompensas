@@ -36,6 +36,9 @@ export class MenuService {
 
     let menu_cr_dlc = new MenuGenerico("CR DLC", "/crDLC", [menu_c_dlc, menu_r_dlc]);
 
+    //VIDEOJUEGO
+    let menu_c_videojuego = new MenuEspecifico("Añadir nuevo videojuego", "/cVideojuego", new Command_Crear(new Factory_Videojuego));
+
     // MENU PRINCIPAL
     let menuPrincipal = new MenuGenerico("Menu Principal","/menu",[
       menu_cr_dlc
