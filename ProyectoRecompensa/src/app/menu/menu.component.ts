@@ -1,5 +1,5 @@
 import { Component, OnInit} from '@angular/core';
-import { iMenu } from "./menus/iMenu";
+import { iMenu } from "../clases/Menus/iMenu";
 import { MenuService } from '../services/menu.service';
 
 @Component({
@@ -12,7 +12,11 @@ export class MenuComponent implements OnInit {
 
   constructor(private menuService: MenuService) {}
 
+  selectMenu(selectMenu: iMenu){
+    this.menuService.setSelectedMenu(selectMenu);
+  }
+
   ngOnInit() {
-    this.menu = this.menuService.getMenu();
+    this.menu = this.menuService.getMenuPrincipal();
   }
 }

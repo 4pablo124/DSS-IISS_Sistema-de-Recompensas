@@ -7,22 +7,22 @@
         </button>
       </mat-card-title>
       <mat-accordion>
-        <mat-expansion-panel *ngFor="let menu of menu.getOptions()">
+        <mat-expansion-panel *ngFor="let subMenu of menu.getOptions()">
           <mat-expansion-panel-header>
             <mat-panel-title>
-              {{menu.getName()}}
+              {{subMenu.getName()}}
             </mat-panel-title>  
           </mat-expansion-panel-header>
             
-            <mat-chip [routerLink]="menu.getRoute()" selected [color]="accent"
-            *ngIf="menu.getOptions()==null">
-              {{menu.getName()}}
+            <mat-chip [routerLink]="subMenu.getRoute()" selected [color]="accent"
+            *ngIf="subMenu.getOptions()==null" (click)="selectMenu(subMenu)">
+              {{subMenu.getName()}}
             </mat-chip>
 
             <mat-chip-list class="mat-chip-list-stacked">
-              <mat-chip *ngFor="let menu of menu.getOptions()" [routerLink]="menu.getRoute()"
-              selected [color]="accent">
-                {{menu.getName()}}
+              <mat-chip *ngFor="let option of subMenu.getOptions()" [routerLink]="option.getRoute()"
+              selected [color]="accent" (click)="selectMenu(option)">
+                {{option.getName()}}
               </mat-chip>
             </mat-chip-list>
 
