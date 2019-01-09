@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Jugador } from '../clases/jugador'
+import { Jugador } from '../clases/Elementos/jugador'
 import { EmailValidator } from '@angular/forms';
 
 @Injectable({

@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from "./app-routing/app-routing.module";
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from "@angular/material/toolbar";
@@ -18,48 +19,33 @@ import { MatSelectModule } from '@angular/material/select';
 
 import { MenuComponent } from './menu/menu.component';
 import { MenuService } from './services/menu.service';
-import { CDLCComponent } from './menu/menus/c-dlc/c-dlc.component';
-import { CJugadorComponent } from './menu/menus/c-jugador/c-jugador.component';
-import { CRecompensaComponent } from './menu/menus/c-recompensa/c-recompensa.component';
-import { CVideojuegoComponent } from './menu/menus/c-videojuego/c-videojuego.component';
-import { DRecompensaComponent } from './menu/menus/d-recompensa/d-recompensa.component';
-import { DVideojuegoComponent } from './menu/menus/d-videojuego/d-videojuego.component';
-import { RDLCComponent } from './menu/menus/r-dlc/r-dlc.component';
-import { RJugadorComponent } from './menu/menus/r-jugador/r-jugador.component';
-import { RRecompensaComponent } from './menu/menus/r-recompensa/r-recompensa.component';
-import { RVideojuegoComponent } from './menu/menus/r-videojuego/r-videojuego.component';
-import { URecompensaComponent } from './menu/menus/u-recompensa/u-recompensa.component';
-import { UVideojuegoComponent } from './menu/menus/u-videojuego/u-videojuego.component';
-import { MenuEspecificoComponent } from './menu/menus/menu-especifico/menu-especifico.component';
-import { MenuGenericoComponent } from './menu/menus/menu-generico/menu-generico.component';
+
+import { CDlcFormComponent } from './menu/forms/c-dlc-form/c-dlc-form.component';
+import { CJugadorFormComponent } from './menu/forms/c-jugador-form/c-jugador-form.component';
+import { CRecompensaFormComponent } from './menu/forms/c-recompensa-form/c-recompensa-form.component';
+import { CVideojuegoFormComponent } from './menu/forms/c-videojuego-form/c-videojuego-form.component';
+import { RDlcFormComponent } from './menu/forms/r-dlc-form/r-dlc-form.component';
+import { RJugadorFormComponent } from './menu/forms/r-jugador-form/r-jugador-form.component';
+import { RudRecompensaFormComponent } from './menu/forms/rud-recompensa-form/rud-recompensa-form.component';
+import { RudVideojuegoFormComponent } from './menu/forms/rud-videojuego-form/rud-videojuego-form.component';
+import { MenuGenericoFormComponent } from './menu/forms/menu-generico-form/menu-generico-form.component';
 
 
 
-import { AppRoutingModule } from "./app-routing/app-routing.module";
-import { NuevoJuegoComponent } from './menu/menus/nuevo-juego/nuevo-juego.component';
-import { NuevaRecompensaComponent } from './menu/menus/nueva-recompensa/nueva-recompensa.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
-    CDLCComponent,
-    CJugadorComponent,
-    CRecompensaComponent,
-    CVideojuegoComponent,
-    DRecompensaComponent,
-    DVideojuegoComponent,
-    RDLCComponent,
-    RJugadorComponent,
-    RRecompensaComponent,
-    RVideojuegoComponent,
-    URecompensaComponent,
-    UVideojuegoComponent,
-    MenuEspecificoComponent,
-    MenuGenericoComponent,
-    NuevoJuegoComponent,
-    NuevaRecompensaComponent
- 
+    CDlcFormComponent,
+    CJugadorFormComponent,
+    CRecompensaFormComponent,
+    CVideojuegoFormComponent,
+    RDlcFormComponent,
+    RJugadorFormComponent,
+    RudRecompensaFormComponent,
+    RudVideojuegoFormComponent,
+    MenuGenericoFormComponent 
   ],
   imports: [
     BrowserModule,
