@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { iMenu } from 'src/app/clases/Menus/iMenu';
+import { MenuService } from 'src/app/services/menu.service';
 
 @Component({
   selector: 'app-c-jugador-form',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CJugadorFormComponent implements OnInit {
 
-  constructor() { }
+  data = {nombre: '', apellidos: '', nickname: '', email: '', fNacimiento: ''}
+
+  menu: iMenu;
+
+  constructor(private menuService: MenuService) {}
 
   ngOnInit() {
+    this.menu = this.menuService.selectedMenu;
   }
 
+  onSubmit(){
+    this.menu.action(this.data);
+  }
 }

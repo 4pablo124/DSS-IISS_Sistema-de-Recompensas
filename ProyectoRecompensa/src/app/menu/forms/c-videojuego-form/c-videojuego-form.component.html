@@ -1,19 +1,21 @@
 <mat-card-title>
-  {{name}}
+  {{menu.name}}
 </mat-card-title>
 
-<form novalidate (ngSubmit)="onSubmit()">
+<form novalidate #Form="ngForm" (ngSubmit)="onSubmit()">
   <p>
     <mat-form-field>
       <input matInput placeholder="Título"
-      name="titulo" #titulo="ngModel" type="text" [(ngModel)]="videojuego.titulo">
+      name="titulo" #titulo="ngModel" type="text" [(ngModel)]="data.titulo" required>
+      <mat-error *ngIf="titulo.errors?.required">Campo obligatorio</mat-error>
     </mat-form-field>
   </p>
 
   <p>
     <mat-form-field>
       <textarea matInput placeholder="Descripción"
-      name="descripcion" #descripcion="ngModel" type="text" [(ngModel)]="videojuego.descripcion">
+      name="descripcion" #descripcion="ngModel" type="text" [(ngModel)]="data.descripcion" required>
+      <mat-error *ngIf="descripcion.errors?.required">Campo obligatorio</mat-error>
     </textarea>
     </mat-form-field>
   </p>
@@ -21,32 +23,32 @@
   <p>
     <mat-form-field>
       <mat-select placeholder="Género"
-      name="genero" #genero="ngModel" type="text" [(ngModel)]="videojuego.genero">
+      name="genero" #genero="ngModel" type="text" [(ngModel)]="data.genero" required>
         <mat-option *ngFor="let genero of generos" [value]="genero">
           {{genero}}
         </mat-option>
       </mat-select>
+    <mat-error *ngIf="genero.errors?.required">Campo obligatorio</mat-error>
     </mat-form-field>
   </p>
 
   <p>
     <mat-form-field>
       <mat-select placeholder="Dispositivo"
-      name="dispositivo" #dispositivo="ngModel" type="text" [(ngModel)]="videojuego.dispositivo">
+      name="dispositivo" #dispositivo="ngModel" type="text" [(ngModel)]="data.dispositivo" required>
         <mat-option *ngFor="let dispositivo of dispositivos" [value]="dispositivo">
           {{dispositivo}}
         </mat-option>
       </mat-select>
+      <mat-error *ngIf="dispositivo.errors?.required">Campo obligatorio</mat-error>
     </mat-form-field>
   </p>
   
   <div>
-    <span>
-      <button mat-button routerLink="/menu">Cancelar</button>
-    </span>
-    <span >
-      <button type="submit" mat-flat-button>Aceptar</button>
-    </span>
+    <div>
+        <button mat-button type="button" routerLink="/menu">Cancelar</button>
+        <button mat-flat-button [disabled]="Form.form.invalid" type="submit">Aceptar</button>
+    </div>
   </div>
 
 </form>

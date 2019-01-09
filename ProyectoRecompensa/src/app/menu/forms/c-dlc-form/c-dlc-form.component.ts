@@ -9,19 +9,19 @@ import { iMenu } from 'src/app/clases/Menus/iMenu';
 })
 export class CDlcFormComponent implements OnInit {
 
-  dlc = {titulo: ' ', descripcion: ' ', videojuego: ' '};
+  data = {titulo: '', descripcion: '', videojuego: ''};
 
   menu: iMenu;
 
   constructor(private menuService: MenuService) { }
 
   ngOnInit() {     
-    this.menu = this.menuService.getSelectedMenu();
+    this.menu = this.menuService.selectedMenu;
     console.log(this.menu);
   }
 
   onSubmit(){
-    this.menu.action(this.dlc);
+    this.menu.action(this.data);
   }
 
 }

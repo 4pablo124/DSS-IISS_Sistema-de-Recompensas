@@ -1,4 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { iMenu } from 'src/app/clases/Menus/iMenu';
+import { MenuService } from 'src/app/services/menu.service';
+import { sDispositivo } from "../../../clases/Elementos/enumerados";
+import { sGenero } from "../../../clases/Elementos/enumerados";
+
+
 
 @Component({
   selector: 'app-c-videojuego-form',
@@ -7,9 +13,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CVideojuegoFormComponent implements OnInit {
 
-  constructor() { }
+  dispositivos = sDispositivo;
+  generos = sGenero;
 
-  ngOnInit() {
+  data = {titulo: '', descripcion: '', genero: '', dispositivo: ''};
+
+  menu: iMenu;
+
+  constructor(private menuService: MenuService) { }
+
+  ngOnInit() {     
+    this.menu = this.menuService.selectedMenu;
+    console.log(this.menu);
   }
 
+  onSubmit(){
+    this.menu.action(this.data);
+  }
 }
