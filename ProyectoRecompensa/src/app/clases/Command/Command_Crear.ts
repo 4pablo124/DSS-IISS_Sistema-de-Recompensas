@@ -10,8 +10,7 @@ export class Command_Crear implements iCommand
         this.factory = factory;
     }
 
-    execute(datos: any):void {
-        console.log('soy command crear con titulo '+ datos.titulo)
+    execute(datos: any): any {
         this.factory.crear(datos);
     }
 }

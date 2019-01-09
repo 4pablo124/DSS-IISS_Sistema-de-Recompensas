@@ -7,7 +7,7 @@ export class MenuGenerico implements iMenu {
     protected name: string,
     protected options: iMenu[]
   ){
-    this.route = ' ';
+    this.route = '/menu';
   }
 
   getRoute(): string {
@@ -22,5 +22,5 @@ export class MenuGenerico implements iMenu {
     return this.options;
   }
 
-  action(): void {}
+  action(data: any): any {}
 }

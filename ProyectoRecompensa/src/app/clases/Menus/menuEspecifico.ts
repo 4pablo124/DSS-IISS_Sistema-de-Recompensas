@@ -22,8 +22,7 @@ export class MenuEspecifico implements iMenu{
     return this.options;
     }
 
-    action(){
-        this.command.execute();
-        console.log('holi sheet');
+    action(data: any): any{
+        this.command.execute(data);
     }
 }

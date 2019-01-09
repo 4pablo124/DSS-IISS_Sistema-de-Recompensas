@@ -21,7 +21,7 @@ export class CDlcFormComponent implements OnInit {
   }
 
   onSubmit(){
-    this.menu.action();
+    this.menu.action(this.dlc);
   }
 
 }
