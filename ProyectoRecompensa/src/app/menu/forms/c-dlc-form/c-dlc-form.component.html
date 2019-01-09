@@ -1,0 +1,34 @@
+<mat-card-title>
+  {{menu.getName()}}
+</mat-card-title>
+
+<form novalidate #Form="ngForm" (ngSubmit)="onSubmit()">
+    <p>
+      <mat-form-field>
+        <input matInput placeholder="Título"
+        name="titulo" #titulo="ngModel" type="text" [(ngModel)]="dlc.titulo" required>
+        <mat-error *ngIf="titulo.errors?.required">El título es obligatorio</mat-error>
+      </mat-form-field>
+    </p>
+  
+    <p>
+      <mat-form-field>
+        <textarea matInput placeholder="Descripción"
+        name="descripcion" #descripcion="ngModel" type="text" [(ngModel)]="dlc.descripcion">
+        </textarea>
+      </mat-form-field>
+    </p>
+
+    <p>
+      <mat-form-field>
+        <input matInput placeholder="Videojuego"
+        name="videojuego" #videojuego="ngModel" type="text" [(ngModel)]="dlc.videojuego">
+      </mat-form-field>
+    </p>
+
+    <div>
+        <button mat-button type="button" routerLink="/menu">Cancelar</button>
+        <button mat-flat-button [disabled]="Form.form.invalid" type="submit">Aceptar</button>
+    </div>
+  
+  </form>

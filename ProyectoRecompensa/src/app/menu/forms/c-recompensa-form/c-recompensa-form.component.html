@@ -1,0 +1,49 @@
+<mat-card-title>
+  {{name}}
+</mat-card-title>
+
+<form novalidate (ngSubmit)="onSubmit()">
+    <p>
+      <mat-form-field>
+        <input matInput placeholder="Título"
+        name="titulo" #titulo="ngModel" type="text" [(ngModel)]="recompensa.titulo">
+      </mat-form-field>
+    </p>
+  
+    <p>
+      <mat-form-field>
+        <textarea matInput placeholder="Descripción"
+        name="descripcion" #descripcion="ngModel" type="text" [(ngModel)]="recompensa.descripcion">
+      </textarea>
+      </mat-form-field>
+    </p>
+    
+    <p>
+      <mat-form-field>
+        <mat-select placeholder="Dificultad"
+        name="dificultad" #dificultad="ngModel" [(ngModel)]="recompensa.dificultad">
+          <mat-option *ngFor="let dificultad of dificultades" [value]="dificultad">
+            {{dificultad}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </p>
+
+    <p>
+      <mat-form-field>
+        <input matInput placeholder="Videojuego"
+        name="videojuego" #videojuego="ngModel" type="text" [(ngModel)]="recompensa.videojuego">
+      </mat-form-field>
+    </p>
+    
+    <div>
+      <span>
+        <button mat-button routerLink="/menu">Cancelar</button>
+      </span>
+      <span >
+        <button type="submit" mat-flat-button>Aceptar</button>
+      </span>
+    </div>
+  
+  </form>
+  
