@@ -26,8 +26,6 @@ import { CRecompensaFormComponent } from './menu/forms/c-recompensa-form/c-recom
 import { CVideojuegoFormComponent } from './menu/forms/c-videojuego-form/c-videojuego-form.component';
 import { RDlcFormComponent } from './menu/forms/r-dlc-form/r-dlc-form.component';
 import { RJugadorFormComponent } from './menu/forms/r-jugador-form/r-jugador-form.component';
-import { RudRecompensaFormComponent } from './menu/forms/rud-recompensa-form/rud-recompensa-form.component';
-import { RudVideojuegoFormComponent } from './menu/forms/rud-videojuego-form/rud-videojuego-form.component';
 import { MenuGenericoFormComponent } from './menu/forms/menu-generico-form/menu-generico-form.component';
 import { RVideojuegoFormComponent } from './menu/forms/r-videojuego-form/r-videojuego-form.component';
 import { UVideojuegoFormComponent } from './menu/forms/u-videojuego-form/u-videojuego-form.component';
@@ -49,8 +47,6 @@ import { DRecompensaFormComponent } from './menu/forms/d-recompensa-form/d-recom
     CVideojuegoFormComponent,
     RDlcFormComponent,
     RJugadorFormComponent,
-    RudRecompensaFormComponent,
-    RudVideojuegoFormComponent,
     MenuGenericoFormComponent,
     RVideojuegoFormComponent,
     UVideojuegoFormComponent,
