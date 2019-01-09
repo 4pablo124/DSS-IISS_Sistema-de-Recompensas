@@ -32,6 +32,9 @@ import { MenuGenericoFormComponent } from './menu/forms/menu-generico-form/menu-
 import { RVideojuegoFormComponent } from './menu/forms/r-videojuego-form/r-videojuego-form.component';
 import { UVideojuegoFormComponent } from './menu/forms/u-videojuego-form/u-videojuego-form.component';
 import { DVideojuegoFormComponent } from './menu/forms/d-videojuego-form/d-videojuego-form.component';
+import { RRecompensaFormComponent } from './menu/forms/r-recompensa-form/r-recompensa-form.component';
+import { URecompensaFormComponent } from './menu/forms/u-recompensa-form/u-recompensa-form.component';
+import { DRecompensaFormComponent } from './menu/forms/d-recompensa-form/d-recompensa-form.component';
 
 
 
@@ -51,7 +54,10 @@ import { DVideojuegoFormComponent } from './menu/forms/d-videojuego-form/d-video
     MenuGenericoFormComponent,
     RVideojuegoFormComponent,
     UVideojuegoFormComponent,
-    DVideojuegoFormComponent 
+    DVideojuegoFormComponent,
+    RRecompensaFormComponent,
+    URecompensaFormComponent,
+    DRecompensaFormComponent 
   ],
   imports: [
     BrowserModule,
