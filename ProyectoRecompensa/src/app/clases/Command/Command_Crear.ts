@@ -1,5 +1,6 @@
-import { iCommand } from '../iCommand';
-import { iFactory } from "../../Factory/iFactory";
+import { iCommand } from './iCommand';
+import { iFactory } from "../Factory/iFactory";
+
 
 export class Command_Crear implements iCommand
 {
@@ -10,6 +11,7 @@ export class Command_Crear implements iCommand
     }
 
     execute(datos: any):void {
+        console.log('soy command crear con titulo '+ datos.titulo)
         this.factory.crear(datos);
     }
 }
