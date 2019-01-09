@@ -2,18 +2,13 @@ import { Genero, Dispositivo } from './enumerados';
 
 export class Videojuego
 {
-    private _titulo: string;
-    private _descripcion: string;
-    private _genero: Genero;
-    private _dispositivo: Dispositivo;
-
-    constructor(titulo: string, descripcion: string, genero: Genero, dispositivo: Dispositivo)
-    {
-        this._titulo = titulo;
-        this._descripcion = descripcion;
-        this._genero = genero;
-        this._dispositivo = dispositivo;
-    }
+    constructor(
+        private _titulo: string,
+        private _descripcion: string,
+        private _genero: Genero,
+        private _dispositivo: Dispositivo
+    )
+    {}
 
     get titulo(): string {return this._titulo;}
     get descripcion(): string {return this._descripcion;}

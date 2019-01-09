@@ -1,19 +1,12 @@
 export class Jugador
 {
-    private _nombre: string;
-    private _apellidos: string;
-    private _nickname: string;
-    private _email: string;
-    private _fechaNacimiento: Date;
-
-    constructor(nombre: string, apellidos: string, nickname: string, email: string, fechaNacimeinto: Date)
-    {
-        this._nombre = nombre;
-        this._apellidos = apellidos;
-        this._nickname = nickname;
-        this._email = email;
-        this._fechaNacimiento = fechaNacimeinto;
-    }
+    constructor(
+        private _nombre: string,
+        private _apellidos: string,
+        private _nickname: string,
+        private _email: string,
+        private _fechaNacimiento: Date
+    ){}
 
     get nombre(): string {return this._nombre;}
     get apellidos(): string {return this._apellidos;}
