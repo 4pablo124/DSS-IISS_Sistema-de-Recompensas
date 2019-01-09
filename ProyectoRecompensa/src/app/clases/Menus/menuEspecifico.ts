@@ -2,27 +2,17 @@ import { iMenu } from "./iMenu";
 import { iCommand } from "../Command/iCommand";
 
 export class MenuEspecifico implements iMenu{
-    protected options: iMenu[];
+    protected _options: iMenu[];
 
     constructor(
-        protected name: string,
-        protected route: string,
-        protected command: iCommand
+        protected _name: string,
+        protected _route: string,
+        protected _command: iCommand
     ){}
     
-    getRoute(): string {
-        return this.route;
-    }
-    
-    getName(): string {
-    return this.name;
-    }
+    get route(): string { return this._route; }
+    get name(): string { return this._name; }
+    get options(): iMenu[] { return this._options; }
 
-    getOptions(): iMenu[] {
-    return this.options;
-    }
-
-    action(data: any): any{
-        this.command.execute(data);
-    }
+    action(data?: any): any{ this._command.execute(data); }
 }

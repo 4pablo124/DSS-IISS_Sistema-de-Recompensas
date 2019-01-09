@@ -1,6 +1,6 @@
 export interface iMenu {
-    getRoute() :string;
-    getName() :string;
-    getOptions(): iMenu[];
+    route :string;
+    name :string;
+    options: iMenu[];
     action(data: any): any;
 }

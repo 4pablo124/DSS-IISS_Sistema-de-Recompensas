@@ -2,27 +2,27 @@
   <div>
     <mat-card>
       <mat-card-title>
-        <button mat-button style="font-size:25px" [routerLink]="menu.getRoute()">
-            {{menu.getName()}}
+        <button mat-button style="font-size:25px" [routerLink]="menu.route">
+            {{menu.name}}
         </button>
       </mat-card-title>
       <mat-accordion>
-        <mat-expansion-panel *ngFor="let subMenu of menu.getOptions()">
+        <mat-expansion-panel *ngFor="let subMenu of menu.options">
           <mat-expansion-panel-header>
             <mat-panel-title>
-              {{subMenu.getName()}}
+              {{subMenu.name}}
             </mat-panel-title>  
           </mat-expansion-panel-header>
             
-            <mat-chip [routerLink]="subMenu.getRoute()" selected [color]="accent"
-            *ngIf="subMenu.getOptions()==null" (click)="selectMenu(subMenu)">
-              {{subMenu.getName()}}
+            <mat-chip [routerLink]="subMenu.route" selected [color]="accent"
+            *ngIf="subMenu.options==null" (click)="selectMenu(subMenu)">
+              {{subMenu.name}}
             </mat-chip>
 
             <mat-chip-list class="mat-chip-list-stacked">
-              <mat-chip *ngFor="let option of subMenu.getOptions()" [routerLink]="option.getRoute()"
+              <mat-chip *ngFor="let option of subMenu.options" [routerLink]="option.route"
               selected [color]="accent" (click)="selectMenu(option)">
-                {{option.getName()}}
+                {{option.name}}
               </mat-chip>
             </mat-chip-list>
 

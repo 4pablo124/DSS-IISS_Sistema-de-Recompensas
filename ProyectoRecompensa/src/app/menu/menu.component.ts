@@ -13,10 +13,10 @@ export class MenuComponent implements OnInit {
   constructor(private menuService: MenuService) {}
 
   selectMenu(selectMenu: iMenu){
-    this.menuService.setSelectedMenu(selectMenu);
+    this.menuService.selectedMenu = selectMenu;
   }
 
   ngOnInit() {
-    this.menu = this.menuService.getMenuPrincipal();
+    this.menu = this.menuService.menuPrincipal;
   }
 }

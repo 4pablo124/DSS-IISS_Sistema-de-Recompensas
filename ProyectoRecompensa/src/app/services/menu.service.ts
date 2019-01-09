@@ -26,8 +26,8 @@ import { MenuGenerico } from '../clases/Menus/menuGenerico';
 })
 export class MenuService {
 
-  menuPrincipal: iMenu;
-  selecetedMenu: iMenu;
+  private _menuPrincipal: iMenu;
+  private _selectedMenu: iMenu;
 
   constructor() { 
     // DLC   
@@ -66,19 +66,19 @@ export class MenuService {
       menu_crud_recompensa
     ]);
 
-    this.menuPrincipal = menuPrincipal;
+    this._menuPrincipal = menuPrincipal;
   }
 
-  getMenuPrincipal(): iMenu{
-    return this.menuPrincipal;
+  get menuPrincipal(): iMenu{
+    return this._menuPrincipal;
   }
 
-  setSelectedMenu(selecetedMenu: iMenu){
-    this.selecetedMenu = selecetedMenu;
+  set selectedMenu(selecetedMenu: iMenu){
+    this._selectedMenu = selecetedMenu;
   }
 
-  getSelectedMenu(): iMenu{
-    return this.selecetedMenu;
+  get selectedMenu(): iMenu{
+    return this._selectedMenu;
   }
 }
 

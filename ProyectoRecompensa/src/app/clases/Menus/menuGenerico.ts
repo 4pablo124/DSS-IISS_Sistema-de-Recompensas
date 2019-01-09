@@ -1,26 +1,18 @@
 import { iMenu } from "./iMenu";
 
 export class MenuGenerico implements iMenu {
-  protected route: string;
+  protected _route: string;
 
   constructor(
-    protected name: string,
-    protected options: iMenu[]
+    protected _name: string,
+    protected _options: iMenu[]
   ){
-    this.route = '/menu';
+    this._route = '/menu';
   }
 
-  getRoute(): string {
-    return this.route;
-  }
+  get route(): string { return this._route; }
+  get name(): string { return this._name; }
+  get options(): iMenu[] { return this._options; }
 
-  getName(): string {
-    return this.name;
-  }
-
-  getOptions(): iMenu[] {
-    return this.options;
-  }
-
-  action(data: any): any {}
+  action(data?: any): any {}
 }
