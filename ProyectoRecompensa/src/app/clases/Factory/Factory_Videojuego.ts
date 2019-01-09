@@ -1,5 +1,5 @@
 import { iFactory } from "./iFactory";
-import { Videojuego } from "../videojuego";
+import { Videojuego } from "../Elementos/videojuego";
 
 export class Factory_Videojuego implements iFactory{
     videojuego: Videojuego;

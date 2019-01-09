@@ -1,5 +1,5 @@
 import { iFactory } from "./iFactory";
-import { Recompensa } from "../recompensa";
+import { Recompensa } from "../Elementos/recompensa";
 
 export class Factory_Recompensa implements iFactory{
     recompensa: Recompensa;

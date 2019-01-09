@@ -1,5 +1,5 @@
 import { iFactory } from "./iFactory";
-import { Jugador } from "../jugador";
+import { Jugador } from "../Elementos/jugador";
 
 export class Factory_Jugador implements iFactory{
     jugador: Jugador;
