@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const videojuegoRoutes = express.Router();
 
-let videojuegoModel = require('..models/videojuego');
+let videojuegoModel = require('../models/videojuego');
 
 videojuegoRoutes.route('/add').post(function(req, res) {
     let videojuego = new videojuegoModel(req.body);

@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const Schema = mongoose.Shema;
+const Schema = mongoose.Schema;
 
 let jugador = new Schema({
         nombre: {

@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const recompensaRoutes = express.Router();
 
-let recompensaModel = require('..models/recompensa');
+let recompensaModel = require('../models/recompensa');
 
 recompensaRoutes.route('/add').post(function(req, res) {
     let recompensa = new recompensaModel(req.body);

@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const Schema = mongoose.Shema;
+const Schema = mongoose.Schema;
 
 let videojuego = new Schema({
         titulo: {

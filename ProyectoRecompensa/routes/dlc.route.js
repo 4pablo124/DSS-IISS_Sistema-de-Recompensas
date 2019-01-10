@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const dlcRoutes = express.Router();
 
-let dlcModel = require('..models/dlc');
+let dlcModel = require('../models/dlc');
 
 dlcRoutes.route('/add').post(function(req, res) {
     let dlc = new dlcModel(req.body);

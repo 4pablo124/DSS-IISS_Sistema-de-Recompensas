@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const Schema = mongoose.Shema;
+const Schema = mongoose.Schema;
 
 let dlc = new Schema({
         titulo: {
@@ -11,8 +11,8 @@ let dlc = new Schema({
         }
         
     }, {
-            collection: 'jugadores'
+            collection: 'dlcs'
     }
 );
 
-module.exports = mongoose.model('jugador', jugador);
+module.exports = mongoose.model('dlc', dlc);

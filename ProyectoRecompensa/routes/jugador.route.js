@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const jugadorRoutes = express.Router();
 
-let jugadorModel = require('..models/jugador');
+let jugadorModel = require('../models/jugador');
 
 jugadorRoutes.route('/add').post(function(req, res) {
     let jugador = new jugadorModel(req.body);

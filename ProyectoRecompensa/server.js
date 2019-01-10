@@ -23,6 +23,11 @@ app.use(cors());
 
 const port = process.env.PORT || 4000;
 
+app.use('/addjugador', jugadorRoutes);
+app.use('/addvideojuego', videojuegoRoutes);
+app.use('/adddlc', dlcRoutes);
+app.use('/addrecompensa', recompensaRoutes);
+
 const server = app.listen(port, function(){
     console.log('Listening on port ' + port);
 });
