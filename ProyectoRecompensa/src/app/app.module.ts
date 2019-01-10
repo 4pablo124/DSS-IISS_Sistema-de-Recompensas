@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from "./app-routing/app-routing.module";
 
+import { HttpClientModule } from '@angular/common/http'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { FlexLayoutModule } from "@angular/flex-layout";
@@ -17,9 +18,10 @@ import { FormsModule , ReactiveFormsModule} from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 
-import { MenuComponent } from './menu/menu.component';
 import { MenuService } from './services/menu.service';
+import { AddJugadorService } from './services/add-jugador.service';
 
+import { MenuComponent } from './menu/menu.component';
 import { CDlcFormComponent } from './menu/forms/c-dlc-form/c-dlc-form.component';
 import { CJugadorFormComponent } from './menu/forms/c-jugador-form/c-jugador-form.component';
 import { CRecompensaFormComponent } from './menu/forms/c-recompensa-form/c-recompensa-form.component';
@@ -33,7 +35,6 @@ import { DVideojuegoFormComponent } from './menu/forms/d-videojuego-form/d-video
 import { RRecompensaFormComponent } from './menu/forms/r-recompensa-form/r-recompensa-form.component';
 import { URecompensaFormComponent } from './menu/forms/u-recompensa-form/u-recompensa-form.component';
 import { DRecompensaFormComponent } from './menu/forms/d-recompensa-form/d-recompensa-form.component';
-
 
 
 
@@ -53,7 +54,7 @@ import { DRecompensaFormComponent } from './menu/forms/d-recompensa-form/d-recom
     DVideojuegoFormComponent,
     RRecompensaFormComponent,
     URecompensaFormComponent,
-    DRecompensaFormComponent 
+    DRecompensaFormComponent
   ],
   imports: [
     BrowserModule,
@@ -69,9 +70,10 @@ import { DRecompensaFormComponent } from './menu/forms/d-recompensa-form/d-recom
     FormsModule,
     ReactiveFormsModule,
     MatSelectModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [MenuService],
+  providers: [MenuService,AddJugadorService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
