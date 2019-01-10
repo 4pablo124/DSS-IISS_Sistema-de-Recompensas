@@ -11,6 +11,6 @@ export class Command_Crear implements iCommand
     }
 
     execute(datos: any): any {
-        this.factory.crear(datos);
+        return this.factory.crear(datos);
     }
 }

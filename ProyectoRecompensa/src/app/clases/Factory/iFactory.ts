@@ -1,3 +1,3 @@
 export interface iFactory{
-    crear(datos: any): void;
+    crear(datos: any): any;
 }

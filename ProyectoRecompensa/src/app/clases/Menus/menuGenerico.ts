@@ -14,5 +14,5 @@ export class MenuGenerico implements iMenu {
   get name(): string { return this._name; }
   get options(): iMenu[] { return this._options; }
 
-  action(data?: any): any {}
+  action(): void {}
 }
