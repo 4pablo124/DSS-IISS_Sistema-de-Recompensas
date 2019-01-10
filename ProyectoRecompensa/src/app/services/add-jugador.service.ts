@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { Jugador } from '../clases/Elementos/jugador'
-import { EmailValidator } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -23,9 +22,5 @@ export class AddJugadorService {
     };
     this.http.post(`${this.uri}/add`, jugadorJSON)
       .subscribe(res => console.log('Done'));
-  }
-
-  onSubmit() {
-
   }
 }
