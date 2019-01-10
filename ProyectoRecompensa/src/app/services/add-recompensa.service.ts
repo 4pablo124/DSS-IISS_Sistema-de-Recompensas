@@ -11,7 +11,7 @@ export class AddRecompensaService {
 
   constructor(private http: HttpClient) { }
 
-  addDLC(recompensa: Recompensa) 
+  addRecompensa(recompensa: Recompensa) 
   {
     const recompensaJSON = {
       titulo: recompensa.titulo,

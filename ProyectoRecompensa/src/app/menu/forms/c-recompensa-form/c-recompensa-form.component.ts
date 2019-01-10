@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { iMenu } from 'src/app/clases/Menus/iMenu';
 import { MenuService } from 'src/app/services/menu.service';
 import { sDificultad } from "../../../clases/Elementos/enumerados";
-import { AddRecompensaService } from 'src/app/services/add-recopensa.service';
+import { AddRecompensaService } from 'src/app/services/add-recompensa.service';
 
 
 @Component({
@@ -28,6 +28,6 @@ export class CRecompensaFormComponent implements OnInit {
 
   onSubmit(){
     let recompensa = this.menu.action(this.data);
-    this.addRecompensaService.addRecopensa(recompensa);
+    this.addRecompensaService.addRecompensa(recompensa);
   }
 }

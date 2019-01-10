@@ -11,7 +11,7 @@ export class AddVideojuegoService {
 
   constructor(private http: HttpClient) { }
 
-  addDLC(videojuego: Videojuego) 
+  addVideojuego(videojuego: Videojuego) 
   {
     const videojuegoJSON = {
       titulo: videojuego.titulo,
