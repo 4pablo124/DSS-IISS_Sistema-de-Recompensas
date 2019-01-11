@@ -20,7 +20,6 @@ export class CDlcFormComponent implements OnInit {
 
   ngOnInit() {     
     this.menu = this.menuService.selectedMenu;
-    console.log(this.menu);
   }
 
   onSubmit(){

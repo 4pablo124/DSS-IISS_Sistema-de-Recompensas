@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-menu-generico-form',
   templateUrl: './menu-generico-form.component.html',
   styleUrls: ['./menu-generico-form.component.scss']
 })
-export class MenuGenericoFormComponent implements OnInit {
+export class MenuGenericoFormComponent {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+  constructor() {}
 
 }
