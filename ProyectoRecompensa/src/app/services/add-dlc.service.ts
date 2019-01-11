@@ -15,7 +15,8 @@ export class AddDlcService {
   {
     const dlcJSON = {
       titulo: dlc.titulo,
-      descripcion: dlc.descripcion
+      descripcion: dlc.descripcion,
+      videojuego: dlc.videojuego
     };
     this.http.post(`${this.uri}/add`, dlcJSON)
       .subscribe(res => console.log('Done'));

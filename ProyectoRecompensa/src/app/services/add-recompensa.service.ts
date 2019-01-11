@@ -16,7 +16,8 @@ export class AddRecompensaService {
     const recompensaJSON = {
       titulo: recompensa.titulo,
       descripcion: recompensa.descripcion,
-      dificultad: recompensa.dificultad
+      dificultad: recompensa.dificultad,
+      videojuego: recompensa.videojuego
     };
     this.http.post(`${this.uri}/add`, recompensaJSON)
       .subscribe(res => console.log('Done'));

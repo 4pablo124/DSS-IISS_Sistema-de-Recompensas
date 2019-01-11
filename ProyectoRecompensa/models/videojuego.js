@@ -11,11 +11,11 @@ let videojuego = new Schema({
         },
 
         genero: {
-            type: Number
+            type: String
         },
 
         dispositivo: {
-            type: Number
+            type: String
         }
 
     }, {

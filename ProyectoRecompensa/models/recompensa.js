@@ -11,7 +11,11 @@ let recompensa = new Schema({
         },
 
         dificultad: {
-            type: Number
+            type: String
+        },
+
+        videojuego: {
+            type: String
         }
         
     }, {

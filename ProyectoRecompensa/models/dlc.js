@@ -8,6 +8,10 @@ let dlc = new Schema({
 
         descripcion: {
             type: String
+        },
+        
+        videojuego: {
+            type: String
         }
         
     }, {

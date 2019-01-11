@@ -10,7 +10,7 @@ import { AddJugadorService } from 'src/app/services/add-jugador.service';
 })
 export class CJugadorFormComponent implements OnInit {
 
-  data = {nombre: '', apellidos: '', nickname: '', email: '', fNacimiento: ''}
+  data = {nombre: '', apellidos: '', nickname: '', email: '', fechaNacimiento: Date}
 
   menu: iMenu;
 
@@ -23,7 +23,9 @@ export class CJugadorFormComponent implements OnInit {
   }
 
   onSubmit(){
+    console.log(this.data);
     let jugador = this.menu.action(this.data);
+    console.log(jugador);
     this.addJugadorService.addJugador(jugador);
   }
 }
