@@ -1,17 +1,18 @@
 import { Injectable } from '@angular/core';
-import { Jugador } from '../clases/Elementos/jugador'
+import { Jugador } from '../../clases/Elementos/jugador'
 import { HttpClient } from '@angular/common/http';
+import { iBD } from './iBD';
 
 @Injectable({
   providedIn: 'root'
 })
-export class AddJugadorService {
+export class AddJugadorService implements iBD{
 
   uri = 'http://localhost:4000/addJugador';
 
   constructor(private http: HttpClient) { }
 
-  addJugador(jugador: Jugador) 
+  add(jugador: Jugador) 
   {
     const jugadorJSON = {
       nombre: jugador.nombre,

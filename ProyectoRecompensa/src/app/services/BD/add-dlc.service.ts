@@ -1,17 +1,18 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { DLC } from '../clases/Elementos/dlc'
+import { DLC } from '../../clases/Elementos/dlc'
+import { iBD } from './iBD';
 
 @Injectable({
   providedIn: 'root'
 })
-export class AddDlcService {
+export class AddDlcService implements iBD{
 
   uri = 'http://localhost:4000/addDLC';
 
   constructor(private http: HttpClient) { }
 
-  addDLC(dlc: DLC) 
+  add(dlc: DLC) 
   {
     const dlcJSON = {
       titulo: dlc.titulo,

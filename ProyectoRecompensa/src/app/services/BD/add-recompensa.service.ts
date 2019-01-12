@@ -1,17 +1,18 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Recompensa } from '../clases/Elementos/recompensa'
+import { Recompensa } from '../../clases/Elementos/recompensa'
+import { iBD } from './iBD';
 
 @Injectable({
   providedIn: 'root'
 })
-export class AddRecompensaService {
+export class AddRecompensaService implements iBD{
 
   uri = 'http://localhost:4000/addRecompensa';
 
   constructor(private http: HttpClient) { }
 
-  addRecompensa(recompensa: Recompensa) 
+  add(recompensa: Recompensa) 
   {
     const recompensaJSON = {
       titulo: recompensa.titulo,
