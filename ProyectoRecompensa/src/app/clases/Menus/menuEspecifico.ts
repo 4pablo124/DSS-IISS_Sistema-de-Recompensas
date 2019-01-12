@@ -1,5 +1,6 @@
 import { iMenu } from "./iMenu";
 import { iCommand } from "../Command/iCommand";
+import { iBD } from "src/app/services/BD/iBD";
 
 export class MenuEspecifico implements iMenu{
     protected _options: iMenu[];
@@ -14,5 +15,6 @@ export class MenuEspecifico implements iMenu{
     get name(): string { return this._name; }
     get options(): iMenu[] { return this._options; }
 
-    action(data?: any): any{ return this._command.execute(data); }
+    action(data?: any, db?: iBD): any{ 
+        return this._command.execute(data, db); }
 }

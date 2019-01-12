@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { iMenu } from 'src/app/clases/Menus/iMenu';
 import { MenuService } from 'src/app/services/menu.service';
-import { AddJugadorService } from 'src/app/services/add-jugador.service';
+import { AddJugadorService } from 'src/app/services/BD/add-jugador.service';
 
 @Component({
   selector: 'app-c-jugador-form',
@@ -15,7 +15,7 @@ export class CJugadorFormComponent implements OnInit {
   menu: iMenu;
 
   constructor(private menuService: MenuService,
-              private addJugadorService: AddJugadorService
+              private bd: AddJugadorService 
   ){}
 
   ngOnInit() {
@@ -23,9 +23,6 @@ export class CJugadorFormComponent implements OnInit {
   }
 
   onSubmit(){
-    console.log(this.data);
-    let jugador = this.menu.action(this.data);
-    console.log(jugador);
-    this.addJugadorService.addJugador(jugador);
+    this.menu.action(this.data, this.bd);
   }
 }

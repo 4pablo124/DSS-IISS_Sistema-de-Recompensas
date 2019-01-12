@@ -3,7 +3,7 @@ import { iMenu } from 'src/app/clases/Menus/iMenu';
 import { MenuService } from 'src/app/services/menu.service';
 import { sDispositivo } from "../../../clases/Elementos/enumerados";
 import { sGenero } from "../../../clases/Elementos/enumerados";
-import { AddVideojuegoService } from 'src/app/services/add-videojuego.service';
+import { AddVideojuegoService } from 'src/app/services/BD/add-videojuego.service';
 
 
 
@@ -22,16 +22,14 @@ export class CVideojuegoFormComponent implements OnInit {
   menu: iMenu;
 
   constructor(private menuService: MenuService,
-              private addVideojuegoService: AddVideojuegoService
+              private bd: AddVideojuegoService 
   ) { }
 
   ngOnInit() {     
     this.menu = this.menuService.selectedMenu;
-    console.log(this.menu);
   }
 
   onSubmit(){
-    let videojuego = this.menu.action(this.data);
-    this.addVideojuegoService.addVideojuego(videojuego);
+    this.menu.action(this.data, this.bd);
   }
 }
