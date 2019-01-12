@@ -27,7 +27,7 @@
     <mat-form-field>
       <textarea matInput placeholder="Descripción"
       name="descripcion" #descripcion="ngModel" type="text" [(ngModel)]="data.descripcion" required [disabled]='!modificable.value'>
-      <mat-error *ngIf="data.errors?.required">Campo obligatorio</mat-error>
+      <mat-error *ngIf="descripcion.errors?.required">Campo obligatorio</mat-error>
     </textarea>
     </mat-form-field>
   </p>

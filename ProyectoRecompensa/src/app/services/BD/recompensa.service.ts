@@ -18,8 +18,8 @@ export class RecompensaService implements iBD{
     const recompensaJSON = {
       titulo: recompensa.titulo,
       descripcion: recompensa.descripcion,
-      genero: recompensa.dificultad,
-      dispositivo: recompensa. videojuego
+      dificultad: recompensa.dificultad,
+      videojuego: recompensa.videojuego
     };
     this.http.post(`${this.uri}/add`, recompensaJSON)
       .subscribe(res => console.log(recompensa));

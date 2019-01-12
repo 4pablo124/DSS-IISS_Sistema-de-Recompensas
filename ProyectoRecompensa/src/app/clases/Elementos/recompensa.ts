@@ -7,7 +7,7 @@ export class Recompensa
         private _titulo: string,
         private _descripcion: string,
         private _dificultad: Dificultad,
-        private _videojuego: String
+        private _videojuego: string
     )
     {}
 
@@ -15,10 +15,10 @@ export class Recompensa
     get titulo(): string {return this._titulo;}
     get descripcion(): string {return this._descripcion;}
     get dificultad(): Dificultad {return this._dificultad;}
-    get videojuego(): String {return this._videojuego;}
+    get videojuego(): string {return this._videojuego;}
 
     set _id(id: string) {this.id = id;}
     set descripcion(descripcion: string) {this._descripcion = descripcion;}
     set dificultad(dificultad: Dificultad) {this._dificultad = dificultad;}
-    set videojuego(videojuego: String) {this._videojuego = videojuego;}
+    set videojuego(videojuego: string) {this._videojuego = videojuego;}
 }

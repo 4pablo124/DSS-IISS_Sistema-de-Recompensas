@@ -5,7 +5,7 @@ let recompensa =  new Schema({
     titulo: String,
     descripcion: String,
     dificultad: String,
-    Videojuego: String
+    videojuego: String
 }, {
     collection: 'recompensas'
    }

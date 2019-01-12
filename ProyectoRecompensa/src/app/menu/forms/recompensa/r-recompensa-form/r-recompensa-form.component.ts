@@ -24,7 +24,7 @@ export class RRecompensaFormComponent implements OnInit {
 
   recompensas: any[];
 
-  data = {titulo: '', descripcion: '', dificultad: '', videojuego: ''}
+  data = {_id: '', titulo: '', descripcion: '', dificultad: '', videojuego: ''}
 
 
   ngOnInit() {
