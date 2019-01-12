@@ -45,14 +45,14 @@ export class MenuService {
     let menu_r_videojuego = new MenuEspecifico("Consultar datos de un videojuego", "/rVideojuego", new Command_R_Videojuego());
     let menu_d_videojuego = new MenuEspecifico("Eliminar videojuego", "/dVideojuego", new Command_D_Videojuego());
 
-    let menu_crd_videojuego = new MenuGenerico("CRD Videojuego", [menu_c_videojuego, menu_r_videojuego, menu_d_videojuego]);
+    let menu_crd_videojuego = new MenuGenerico("CRUD Videojuego", [menu_c_videojuego, menu_r_videojuego, menu_d_videojuego]);
 
     // RECOMPENSA
     let menu_c_recompensa = new MenuEspecifico("Añadir nueva recompensa", "/cRecompensa", new Command_Crear(new Factory_Recompensa));
     let menu_r_recompensa = new MenuEspecifico("Consultar datos de una recompensa", "/rRecompensa", new Command_R_Recompensa());
     let menu_d_recompensa = new MenuEspecifico("Eliminar recompensa", "/dRecompensa", new Command_D_Recompensa());
 
-    let menu_crd_recompensa = new MenuGenerico("CRD Recompensa", [menu_c_recompensa, menu_r_recompensa, menu_d_recompensa]);
+    let menu_crd_recompensa = new MenuGenerico("CRUD Recompensa", [menu_c_recompensa, menu_r_recompensa, menu_d_recompensa]);
 
     // MENU PRINCIPAL
     let menuPrincipal = new MenuGenerico("Menu Principal", [
