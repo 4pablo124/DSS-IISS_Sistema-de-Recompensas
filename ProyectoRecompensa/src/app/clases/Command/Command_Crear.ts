@@ -12,7 +12,6 @@ export class Command_Crear implements iCommand
     }
 
     execute(datos: any, bd: iBD): any {
-        console.log(bd);
         let elemento = this.factory.crear(datos);
         bd.add(elemento);
     }

@@ -6,6 +6,7 @@ let videojuegoModel = require('../models/videojuego');
 
 videojuegoRoutes.route('/add').post(function(req, res) {
     let videojuego = new videojuegoModel(req.body);
+    
     videojuego.save()
         .then(game => {
             res.status(200).json({'videojuego': 'videojuego se ha añadido correctamente'});

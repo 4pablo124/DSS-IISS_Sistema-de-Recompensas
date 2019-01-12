@@ -21,25 +21,25 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 
 
 import { MenuService } from './services/menu.service';
+import { DlcService } from './services/BD/dlc.service';
+import { JugadorService } from './services/BD/jugador.service';
+import { RecompensaService } from './services/BD/recompensa.service';
+import { VideojuegoService } from './services/BD/videojuego.service';
 
 import { MenuComponent } from './menu/menu.component';
-import { CDlcFormComponent } from './menu/forms/c-dlc-form/c-dlc-form.component';
-import { CJugadorFormComponent } from './menu/forms/c-jugador-form/c-jugador-form.component';
-import { CRecompensaFormComponent } from './menu/forms/c-recompensa-form/c-recompensa-form.component';
-import { CVideojuegoFormComponent } from './menu/forms/c-videojuego-form/c-videojuego-form.component';
-import { RDlcFormComponent } from './menu/forms/r-dlc-form/r-dlc-form.component';
-import { RJugadorFormComponent } from './menu/forms/r-jugador-form/r-jugador-form.component';
+import { CDlcFormComponent } from './menu/forms/dlc/c-dlc-form/c-dlc-form.component';
+import { RDlcFormComponent } from './menu/forms/dlc/r-dlc-form/r-dlc-form.component';
+import { CJugadorFormComponent } from './menu/forms/jugador/c-jugador-form/c-jugador-form.component';
+import { RJugadorFormComponent } from './menu/forms/jugador/r-jugador-form/r-jugador-form.component';
 import { MenuGenericoFormComponent } from './menu/forms/menu-generico-form/menu-generico-form.component';
-import { RVideojuegoFormComponent } from './menu/forms/r-videojuego-form/r-videojuego-form.component';
-import { UVideojuegoFormComponent } from './menu/forms/u-videojuego-form/u-videojuego-form.component';
-import { DVideojuegoFormComponent } from './menu/forms/d-videojuego-form/d-videojuego-form.component';
-import { RRecompensaFormComponent } from './menu/forms/r-recompensa-form/r-recompensa-form.component';
-import { URecompensaFormComponent } from './menu/forms/u-recompensa-form/u-recompensa-form.component';
-import { DRecompensaFormComponent } from './menu/forms/d-recompensa-form/d-recompensa-form.component';
-import { AddDlcService } from './services/BD/add-dlc.service';
-import { AddJugadorService } from './services/BD/add-jugador.service';
-import { AddRecompensaService } from './services/BD/add-recompensa.service';
-import { AddVideojuegoService } from './services/BD/add-videojuego.service';
+import { CVideojuegoFormComponent } from './menu/forms/videojuego/c-videojuego-form/c-videojuego-form.component';
+import { RVideojuegoFormComponent } from './menu/forms/videojuego/r-videojuego-form/r-videojuego-form.component';
+import { UVideojuegoFormComponent } from './menu/forms/videojuego/u-videojuego-form/u-videojuego-form.component';
+import { DVideojuegoFormComponent } from './menu/forms/videojuego/d-videojuego-form/d-videojuego-form.component';
+import { CRecompensaFormComponent } from './menu/forms/recompensa/c-recompensa-form/c-recompensa-form.component';
+import { RRecompensaFormComponent } from './menu/forms/recompensa/r-recompensa-form/r-recompensa-form.component';
+import { URecompensaFormComponent } from './menu/forms/recompensa/u-recompensa-form/u-recompensa-form.component';
+import { DRecompensaFormComponent } from './menu/forms/recompensa/d-recompensa-form/d-recompensa-form.component';
 
 
 
@@ -81,10 +81,10 @@ import { AddVideojuegoService } from './services/BD/add-videojuego.service';
   ],
   providers: [
     MenuService,
-    AddDlcService,
-    AddJugadorService,
-    AddRecompensaService,
-    AddVideojuegoService
+    DlcService,
+    JugadorService,
+    RecompensaService,
+    VideojuegoService
   ],
   bootstrap: [AppComponent]
 })

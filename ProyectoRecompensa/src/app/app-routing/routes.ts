@@ -1,17 +1,17 @@
 import { Routes } from "@angular/router";
 import { MenuGenericoFormComponent } from "../menu/forms/menu-generico-form/menu-generico-form.component";
-import { CDlcFormComponent } from "../menu/forms/c-dlc-form/c-dlc-form.component";
-import { RDlcFormComponent } from "../menu/forms/r-dlc-form/r-dlc-form.component";
-import { CJugadorFormComponent } from "../menu/forms/c-jugador-form/c-jugador-form.component";
-import { RJugadorFormComponent } from "../menu/forms/r-jugador-form/r-jugador-form.component";
-import { CVideojuegoFormComponent } from "../menu/forms/c-videojuego-form/c-videojuego-form.component";
-import { RVideojuegoFormComponent } from "../menu/forms/r-videojuego-form/r-videojuego-form.component";
-import { UVideojuegoFormComponent } from "../menu/forms/u-videojuego-form/u-videojuego-form.component";
-import { DVideojuegoFormComponent } from "../menu/forms/d-videojuego-form/d-videojuego-form.component";
-import { CRecompensaFormComponent } from "../menu/forms/c-recompensa-form/c-recompensa-form.component";
-import { RRecompensaFormComponent } from "../menu/forms/r-recompensa-form/r-recompensa-form.component";
-import { URecompensaFormComponent } from "../menu/forms/u-recompensa-form/u-recompensa-form.component";
-import { DRecompensaFormComponent } from "../menu/forms/d-recompensa-form/d-recompensa-form.component";
+import { CDlcFormComponent } from "../menu/forms/dlc/c-dlc-form/c-dlc-form.component";
+import { RDlcFormComponent } from "../menu/forms/dlc/r-dlc-form/r-dlc-form.component";
+import { CJugadorFormComponent } from "../menu/forms/jugador/c-jugador-form/c-jugador-form.component";
+import { RJugadorFormComponent } from "../menu/forms/jugador/r-jugador-form/r-jugador-form.component";
+import { CVideojuegoFormComponent } from "../menu/forms/videojuego/c-videojuego-form/c-videojuego-form.component";
+import { RVideojuegoFormComponent } from "../menu/forms/videojuego/r-videojuego-form/r-videojuego-form.component";
+import { UVideojuegoFormComponent } from "../menu/forms/videojuego/u-videojuego-form/u-videojuego-form.component";
+import { DVideojuegoFormComponent } from "../menu/forms/videojuego/d-videojuego-form/d-videojuego-form.component";
+import { CRecompensaFormComponent } from "../menu/forms/recompensa/c-recompensa-form/c-recompensa-form.component";
+import { RRecompensaFormComponent } from "../menu/forms/recompensa/r-recompensa-form/r-recompensa-form.component";
+import { URecompensaFormComponent } from "../menu/forms/recompensa/u-recompensa-form/u-recompensa-form.component";
+import { DRecompensaFormComponent } from "../menu/forms/recompensa/d-recompensa-form/d-recompensa-form.component";
 
 
 
