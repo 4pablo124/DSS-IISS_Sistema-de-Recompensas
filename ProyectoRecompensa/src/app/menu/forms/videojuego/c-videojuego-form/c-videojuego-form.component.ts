@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { iMenu } from 'src/app/clases/Menus/iMenu';
 import { MenuService } from 'src/app/services/menu.service';
-import { sDispositivo } from "../../../clases/Elementos/enumerados";
-import { sGenero } from "../../../clases/Elementos/enumerados";
-import { AddVideojuegoService } from 'src/app/services/BD/add-videojuego.service';
+import { sDispositivo } from "src/app/clases/Elementos/enumerados";
+import { sGenero } from "src/app/clases/Elementos/enumerados";
+import { VideojuegoService } from 'src/app/services/BD/videojuego.service';
 
 
 
@@ -22,7 +22,7 @@ export class CVideojuegoFormComponent implements OnInit {
   menu: iMenu;
 
   constructor(private menuService: MenuService,
-              private bd: AddVideojuegoService 
+              private bd: VideojuegoService 
   ) { }
 
   ngOnInit() {     

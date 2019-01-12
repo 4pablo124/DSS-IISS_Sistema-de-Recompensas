@@ -3,6 +3,7 @@ import { MenuService } from 'src/app/services/menu.service';
 import { iMenu } from 'src/app/clases/Menus/iMenu';
 import {FormControl} from '@angular/forms';
 import { sDificultad } from 'src/app/clases/Elementos/enumerados';
+import { RecompensaService } from 'src/app/services/BD/recompensa.service';
 
 @Component({
   selector: 'app-r-recompensa-form',
@@ -11,38 +12,23 @@ import { sDificultad } from 'src/app/clases/Elementos/enumerados';
 })
 export class RRecompensaFormComponent implements OnInit {
   
+  constructor(private menuService: MenuService,
+              private bd: RecompensaService
+  ){}
+
   menu: iMenu;
 
   modificable = new FormControl(false);
 
   dificultades = sDificultad;
 
-  recompensas = [
-    {
-      titulo: 'pepe',
-      descripcion: 'flautas',
-      dificultad: 'Facil',
-      videojuego: 'efsff'
-    },
-    {
-      titulo: 'jose',
-      descripcion: 'pacheco',
-      dificultad: 'Medio',
-      videojuego: 'efsff'
-    },
-    {
-      titulo: 'anonimo',
-      descripcion: 'gonzalez',
-      dificultad: 'Dificil',
-      videojuego: 'efsff'
-    }
-  ];
+  recompensas: any[];
 
   data = {titulo: '', descripcion: '', dificultad: '', videojuego: ''}
 
-  constructor(private menuService: MenuService) { }
 
   ngOnInit() {
     this.menu = this.menuService.selectedMenu;
+    this.bd.findAll().subscribe(recompensas => this.recompensas = recompensas);
   }
 }

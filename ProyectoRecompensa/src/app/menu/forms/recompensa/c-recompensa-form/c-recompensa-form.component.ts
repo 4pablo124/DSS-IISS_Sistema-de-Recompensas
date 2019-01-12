@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { iMenu } from 'src/app/clases/Menus/iMenu';
 import { MenuService } from 'src/app/services/menu.service';
-import { sDificultad } from "../../../clases/Elementos/enumerados";
-import { AddRecompensaService } from 'src/app/services/BD/add-recompensa.service';
+import { sDificultad } from "src/app/clases/Elementos/enumerados";
+import { RecompensaService } from 'src/app/services/BD/recompensa.service';
 
 
 @Component({
@@ -19,7 +19,7 @@ export class CRecompensaFormComponent implements OnInit {
   menu: iMenu;
 
   constructor(private menuService: MenuService,
-              private bd: AddRecompensaService 
+              private bd: RecompensaService 
   ) {}
 
   ngOnInit() {

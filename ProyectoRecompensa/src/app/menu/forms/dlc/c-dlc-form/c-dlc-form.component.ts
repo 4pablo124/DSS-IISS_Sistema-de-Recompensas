@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuService } from 'src/app/services/menu.service';
 import { iMenu } from 'src/app/clases/Menus/iMenu';
-import { AddDlcService } from 'src/app/services/BD/add-dlc.service';
+import { DlcService } from 'src/app/services/BD/dlc.service';
 
 @Component({
   selector: 'app-c-dlc-form',
@@ -15,7 +15,7 @@ export class CDlcFormComponent implements OnInit {
   menu: iMenu;
 
   constructor(private menuService: MenuService,
-              private bd: AddDlcService  
+              private bd: DlcService  
   ) { }
 
   ngOnInit() {     
