@@ -15,8 +15,14 @@ export class RecompensaService implements iBD{
   constructor(private http: HttpClient) { }
 
   add(recompensa: Recompensa) {
-    this.http.post(`${this.uri}/add`, recompensa)
-      .subscribe(res => console.log(recompensa, 'Done'));
+    const recompensaJSON = {
+      titulo: recompensa.titulo,
+      descripcion: recompensa.descripcion,
+      genero: recompensa.dificultad,
+      dispositivo: recompensa. videojuego
+    };
+    this.http.post(`${this.uri}/add`, recompensaJSON)
+      .subscribe(res => console.log(recompensa));
   }
 
   findAll(): Observable<Recompensa[]>{
