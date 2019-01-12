@@ -4,7 +4,7 @@ import { Videojuego } from "../Elementos/videojuego";
 export class Factory_Videojuego implements iFactory{
 
     crear(datos: any): Videojuego{
-        return new Videojuego(datos.titulo, datos.string,
+        return new Videojuego(datos.titulo, datos.descripcion,
                               datos.genero, datos.dispositivo);
     }
 }
