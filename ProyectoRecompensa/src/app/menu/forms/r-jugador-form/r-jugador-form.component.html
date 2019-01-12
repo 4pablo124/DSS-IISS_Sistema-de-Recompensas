@@ -1,6 +1,54 @@
 <mat-card-title>
-    Aún por implementar
-  </mat-card-title>
+  {{menu.name}}
+</mat-card-title>
+
+<form>
+  <p>
+    <mat-form-field>
+      <mat-select placeholder="Jugador"
+      name="jugador" #jugador="ngModel" [(ngModel)]="data">
+        <mat-option *ngFor="let jugador of jugadores" [value]="jugador">
+          {{jugador.nickname}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </p>
+
+  <p>
+    <mat-form-field>
+      <input matInput placeholder="Nombre"
+      name="nombre" #nombre="ngModel" type="text" [(ngModel)]="data.nombre" disabled>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Apellidos"
+      name="apellidos" #apellidos="ngModel" type="text" [(ngModel)]="data.apellidos" disabled>
+    </mat-form-field>
+  </p>
   
-  <img src="https://vignette.wikia.nocookie.net/techheaven/images/d/de/LinuxCon_Europe_Linus_Torvalds.jpg/revision/latest?cb=20180103182629"
-  alt="Linus knows">
+  <p>
+    <mat-form-field>
+      <input matInput placeholder="Nickname"
+      name="nickname" #nickname="ngModel" type="text" [(ngModel)]="data.nickname" disabled>
+    </mat-form-field>
+  </p>
+  
+  <p>
+    <mat-form-field>
+      <input matInput placeholder="Correo Electronico"
+      name="email" #email="ngModel" type="email" [(ngModel)]="data.email" disabled>
+    </mat-form-field>
+  </p>
+      
+  <p>
+    <mat-form-field>
+      <input matInput placeholder="Fecha de Nacimiento"
+      name="fechaNacimiento" #fechaNacimiento="ngModel" type="date" [(ngModel)]="data.fechaNacimiento" disabled>
+    </mat-form-field>
+  </p>
+  
+  <div>
+    <button mat-flat-button type="button" routerLink="/menu">Atrás</button>
+  </div>
+
+</form>

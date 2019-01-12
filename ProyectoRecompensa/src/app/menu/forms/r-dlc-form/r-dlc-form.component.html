@@ -1,6 +1,48 @@
 <mat-card-title>
-    Aún por implementar
-  </mat-card-title>
-  
-  <img src="https://vignette.wikia.nocookie.net/techheaven/images/d/de/LinuxCon_Europe_Linus_Torvalds.jpg/revision/latest?cb=20180103182629"
-  alt="Linus knows">
+  {{menu.name}}
+</mat-card-title>
+
+<form>
+
+  <p>
+    <mat-form-field>
+      <mat-select placeholder="DLC"
+      name="dlc" #dlc="ngModel" [(ngModel)]="data" required>
+      <mat-option *ngFor="let dlc of dlcs" [value]="dlc">
+        {{dlc.titulo}}
+      </mat-option>
+    </mat-select>
+    <mat-error *ngIf="dlc.errors?.required">Campo obligatorio</mat-error>
+    </mat-form-field>
+  </p>
+
+  <p>
+    <mat-form-field>
+      <input matInput placeholder="Título"
+      name="titulo" #titulo="ngModel" type="text" [(ngModel)]="data.titulo" disabled>
+      <mat-error *ngIf="titulo.errors?.required">Campo obligatorio</mat-error>
+    </mat-form-field>
+  </p>
+
+  <p>
+    <mat-form-field>
+      <textarea matInput placeholder="Descripción"
+      name="descripcion" #descripcion="ngModel" type="text" [(ngModel)]="data.descripcion" disabled>
+    </textarea>
+    <mat-error *ngIf="descripcion.errors?.required">Campo obligatorio</mat-error>
+    </mat-form-field>
+  </p>
+
+  <p>
+    <mat-form-field>
+      <input matInput placeholder="Videojuego"
+      name="videojuego" #videojuego="ngModel" type="text" [(ngModel)]="data.videojuego" disabled>
+      <mat-error *ngIf="videojuego.errors?.required">Campo obligatorio</mat-error>
+    </mat-form-field>
+  </p>
+
+  <div>
+    <button mat-flat-button type="button" routerLink="/menu">Atrás</button>       
+  </div>
+
+</form>

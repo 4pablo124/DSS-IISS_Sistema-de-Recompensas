@@ -1,6 +1,64 @@
 <mat-card-title>
-    Aún por implementar
-  </mat-card-title>
+  {{menu.name}}
+</mat-card-title>
+
+<form novalidate #Form="ngForm" (ngSubmit)="onSubmit()">
+  <p>
+    <mat-form-field>
+      <mat-select placeholder="Recompensas"
+      name="recompensa" #recompensa="ngModel" [(ngModel)]="data" required>
+      <mat-option *ngFor="let recompensa of recompensas" [value]="recompensa">
+        {{recompensa.titulo}}
+      </mat-option>
+    </mat-select>
+    <mat-error *ngIf="recompensa.errors?.required">Campo obligatorio</mat-error>
+    </mat-form-field>
+  </p>
+
+  <p>
+    <mat-form-field>
+      <input matInput placeholder="Título"
+      name="titulo" #titulo="ngModel" type="text" [(ngModel)]="data.titulo" required [disabled]='!modificable.value'>
+      <mat-error *ngIf="titulo.errors?.required">Campo obligatorio</mat-error>
+    </mat-form-field>
+  </p>
+
+  <p>
+    <mat-form-field>
+      <textarea matInput placeholder="Descripción"
+      name="descripcion" #descripcion="ngModel" type="text" [(ngModel)]="data.descripcion" required [disabled]='!modificable.value'>
+      <mat-error *ngIf="data.errors?.required">Campo obligatorio</mat-error>
+    </textarea>
+    </mat-form-field>
+  </p>
   
-  <img src="https://vignette.wikia.nocookie.net/techheaven/images/d/de/LinuxCon_Europe_Linus_Torvalds.jpg/revision/latest?cb=20180103182629"
-  alt="Linus knows">
+  <p>
+    <mat-form-field>
+      <mat-select placeholder="Dificultad"
+      name="dificultad" #dificultad="ngModel" [(ngModel)]="data.dificultad" required [disabled]='!modificable.value'>
+      <mat-option *ngFor="let dificultad of dificultades" [value]="dificultad">
+        {{dificultad}}
+      </mat-option>
+    </mat-select>
+    <mat-error *ngIf="dificultad.errors?.required">Campo obligatorio</mat-error>
+    </mat-form-field>
+  </p>
+
+  <p>
+    <mat-form-field>
+      <input matInput placeholder="Videojuego"
+      name="videojuego" #videojuego="ngModel" type="text" [(ngModel)]="data.videojuego" required [disabled]='!modificable.value'>
+      <mat-error *ngIf="videojuego.errors?.required">Campo obligatorio</mat-error>
+    </mat-form-field>
+  </p>
+  
+  <div>
+    <mat-checkbox [formControl]="modificable">Modificar</mat-checkbox>
+    <div>
+      <button mat-button type="button" routerLink="/menu">Cancelar</button>
+      <button mat-flat-button color="warn" *ngIf="!modificable.value">Borrar</button>
+      <button mat-flat-button [disabled]="Form.form.invalid" type="submit" *ngIf="modificable.value">Guardar</button>
+    </div>
+  </div>
+
+</form>
