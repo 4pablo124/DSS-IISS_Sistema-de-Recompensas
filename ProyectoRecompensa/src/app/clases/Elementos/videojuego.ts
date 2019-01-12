@@ -1,7 +1,14 @@
 import { Genero, Dispositivo } from './enumerados';
+import { DLC } from './dlc';
+import { Recompensa } from './recompensa';
+import { Jugador } from './jugador';
 
 export class Videojuego
 {
+    DLCs: Set<DLC>;
+    recompensas: Set<Recompensa>;
+    jugadores: Set<Jugador>;
+
     constructor(
         private _titulo: string,
         private _descripcion: string,

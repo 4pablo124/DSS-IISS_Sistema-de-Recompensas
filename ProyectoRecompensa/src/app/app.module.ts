@@ -31,10 +31,8 @@ import { RDlcFormComponent } from './menu/forms/r-dlc-form/r-dlc-form.component'
 import { RJugadorFormComponent } from './menu/forms/r-jugador-form/r-jugador-form.component';
 import { MenuGenericoFormComponent } from './menu/forms/menu-generico-form/menu-generico-form.component';
 import { RVideojuegoFormComponent } from './menu/forms/r-videojuego-form/r-videojuego-form.component';
-import { UVideojuegoFormComponent } from './menu/forms/u-videojuego-form/u-videojuego-form.component';
 import { DVideojuegoFormComponent } from './menu/forms/d-videojuego-form/d-videojuego-form.component';
 import { RRecompensaFormComponent } from './menu/forms/r-recompensa-form/r-recompensa-form.component';
-import { URecompensaFormComponent } from './menu/forms/u-recompensa-form/u-recompensa-form.component';
 import { DRecompensaFormComponent } from './menu/forms/d-recompensa-form/d-recompensa-form.component';
 import { AddDlcService } from './services/BD/add-dlc.service';
 import { AddJugadorService } from './services/BD/add-jugador.service';
@@ -55,10 +53,8 @@ import { AddVideojuegoService } from './services/BD/add-videojuego.service';
     RJugadorFormComponent,
     MenuGenericoFormComponent,
     RVideojuegoFormComponent,
-    UVideojuegoFormComponent,
     DVideojuegoFormComponent,
     RRecompensaFormComponent,
-    URecompensaFormComponent,
     DRecompensaFormComponent
   ],
   imports: [
