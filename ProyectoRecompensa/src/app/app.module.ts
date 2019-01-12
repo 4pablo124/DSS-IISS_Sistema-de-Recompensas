@@ -17,12 +17,10 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule , ReactiveFormsModule} from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+
 
 import { MenuService } from './services/menu.service';
-import { AddDlcService } from './services/add-dlc.service';
-import { AddJugadorService } from './services/add-jugador.service';
-import { AddRecompensaService } from './services/add-recompensa.service';
-import { AddVideojuegoService } from './services/add-videojuego.service';
 
 import { MenuComponent } from './menu/menu.component';
 import { CDlcFormComponent } from './menu/forms/c-dlc-form/c-dlc-form.component';
@@ -38,6 +36,10 @@ import { DVideojuegoFormComponent } from './menu/forms/d-videojuego-form/d-video
 import { RRecompensaFormComponent } from './menu/forms/r-recompensa-form/r-recompensa-form.component';
 import { URecompensaFormComponent } from './menu/forms/u-recompensa-form/u-recompensa-form.component';
 import { DRecompensaFormComponent } from './menu/forms/d-recompensa-form/d-recompensa-form.component';
+import { AddDlcService } from './services/BD/add-dlc.service';
+import { AddJugadorService } from './services/BD/add-jugador.service';
+import { AddRecompensaService } from './services/BD/add-recompensa.service';
+import { AddVideojuegoService } from './services/BD/add-videojuego.service';
 
 
 
@@ -73,6 +75,7 @@ import { DRecompensaFormComponent } from './menu/forms/d-recompensa-form/d-recom
     FormsModule,
     ReactiveFormsModule,
     MatSelectModule,
+    MatCheckboxModule,
     AppRoutingModule,
     HttpClientModule
   ],
