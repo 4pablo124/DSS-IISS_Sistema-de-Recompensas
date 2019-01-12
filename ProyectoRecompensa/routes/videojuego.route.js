@@ -8,7 +8,7 @@ videojuegoRoutes.route('/add').post(function (req, res){
     // Create a Videojuego
     let videojuego = new Videojuego(req.body);
  
-    // Guarda recomensa en MongoDB
+    // Guarda videojuego en MongoDB
     videojuego.save()
         .then(data => {
             res.status(200).json(data);

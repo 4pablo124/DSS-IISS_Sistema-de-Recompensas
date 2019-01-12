@@ -5,8 +5,6 @@ import { Jugador } from './jugador';
 
 export class Videojuego
 {
-    DLCs: Set<DLC>;
-    recompensas: Set<Recompensa>;
     jugadores: Set<Jugador>;
     private id: string;
     constructor(
