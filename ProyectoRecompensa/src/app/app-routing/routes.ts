@@ -6,11 +6,9 @@ import { CJugadorFormComponent } from "../menu/forms/jugador/c-jugador-form/c-ju
 import { RJugadorFormComponent } from "../menu/forms/jugador/r-jugador-form/r-jugador-form.component";
 import { CVideojuegoFormComponent } from "../menu/forms/videojuego/c-videojuego-form/c-videojuego-form.component";
 import { RVideojuegoFormComponent } from "../menu/forms/videojuego/r-videojuego-form/r-videojuego-form.component";
-import { UVideojuegoFormComponent } from "../menu/forms/videojuego/u-videojuego-form/u-videojuego-form.component";
 import { DVideojuegoFormComponent } from "../menu/forms/videojuego/d-videojuego-form/d-videojuego-form.component";
 import { CRecompensaFormComponent } from "../menu/forms/recompensa/c-recompensa-form/c-recompensa-form.component";
 import { RRecompensaFormComponent } from "../menu/forms/recompensa/r-recompensa-form/r-recompensa-form.component";
-import { URecompensaFormComponent } from "../menu/forms/recompensa/u-recompensa-form/u-recompensa-form.component";
 import { DRecompensaFormComponent } from "../menu/forms/recompensa/d-recompensa-form/d-recompensa-form.component";
 
 
@@ -25,11 +23,9 @@ export const routes: Routes = [
     { path: 'rJugador', component: RJugadorFormComponent },
     { path: 'cVideojuego', component: CVideojuegoFormComponent },
     { path: 'rVideojuego', component: RVideojuegoFormComponent },
-    { path: 'uVideojuego', component: UVideojuegoFormComponent },
     { path: 'dVideojuego', component: DVideojuegoFormComponent },
     { path: 'cRecompensa', component: CRecompensaFormComponent },
     { path: 'rRecompensa', component: RRecompensaFormComponent },
-    { path: 'uRecompensa', component: URecompensaFormComponent },
     { path: 'dRecompensa', component: DRecompensaFormComponent },
     { path: '', redirectTo: '/menu', pathMatch: 'full' }
 ];
