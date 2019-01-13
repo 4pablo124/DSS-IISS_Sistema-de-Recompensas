@@ -6,11 +6,11 @@ import {FormControl} from '@angular/forms';
 
 
 @Component({
-  selector: 'app-r-videojuego-form',
-  templateUrl: './r-videojuego-form.component.html',
-  styleUrls: ['./r-videojuego-form.component.scss']
+  selector: 'app-rud-videojuego-form',
+  templateUrl: './rud-videojuego-form.component.html',
+  styleUrls: ['./rud-videojuego-form.component.scss']
 })
-export class RVideojuegoFormComponent implements OnInit {
+export class RUDVideojuegoFormComponent implements OnInit {
   
   menu: iMenu;
 

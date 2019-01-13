@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RVideojuegoFormComponent } from './r-videojuego-form.component';
+import { RUDRecompensaFormComponent } from './rud-recompensa-form.component';
 
-describe('RVideojuegoFormComponent', () => {
-  let component: RVideojuegoFormComponent;
-  let fixture: ComponentFixture<RVideojuegoFormComponent>;
+describe('RRecompensaFormComponent', () => {
+  let component: RUDRecompensaFormComponent;
+  let fixture: ComponentFixture<RUDRecompensaFormComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RVideojuegoFormComponent ]
+      declarations: [ RUDRecompensaFormComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(RVideojuegoFormComponent);
+    fixture = TestBed.createComponent(RUDRecompensaFormComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

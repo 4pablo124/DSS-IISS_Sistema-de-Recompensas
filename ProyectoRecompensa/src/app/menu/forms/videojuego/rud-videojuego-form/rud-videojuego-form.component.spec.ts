@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DVideojuegoFormComponent } from './d-videojuego-form.component';
+import { RUDVideojuegoFormComponent } from './rud-videojuego-form.component';
 
-describe('DVideojuegoFormComponent', () => {
-  let component: DVideojuegoFormComponent;
-  let fixture: ComponentFixture<DVideojuegoFormComponent>;
+describe('RVideojuegoFormComponent', () => {
+  let component: RUDVideojuegoFormComponent;
+  let fixture: ComponentFixture<RUDVideojuegoFormComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DVideojuegoFormComponent ]
+      declarations: [ RUDVideojuegoFormComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DVideojuegoFormComponent);
+    fixture = TestBed.createComponent(RUDVideojuegoFormComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
