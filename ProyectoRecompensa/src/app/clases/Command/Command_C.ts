@@ -3,7 +3,7 @@ import { iFactory } from "../Factory/iFactory";
 import { iBD } from 'src/app/services/BD/iBD';
 
 
-export class Command_Crear implements iCommand
+export class Command_C implements iCommand
 {
     factory: iFactory;
 
