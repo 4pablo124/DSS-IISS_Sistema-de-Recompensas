@@ -17,6 +17,7 @@ const jugadorRoutes = require('./routes/jugador.route');
 const videojuegoRoutes = require('./routes/videojuego.route');
 const dlcRoutes = require('./routes/dlc.route');
 const recompensaRoutes = require('./routes/recompensa.route');
+const jugadorVideojuegoRoutes = require('./routes/jugadorVideojuego.route');
 
 app.use(bodyParser.json());
 app.use(cors());
@@ -27,6 +28,7 @@ app.use('/jugador', jugadorRoutes);
 app.use('/videojuego', videojuegoRoutes);
 app.use('/dlc', dlcRoutes);
 app.use('/recompensa', recompensaRoutes);
+app.use('/jugadorVideojuego', jugadorVideojuegoRoutes);
 
 const server = app.listen(port, function(){
     console.log('Listening on port ' + port);
