@@ -37,6 +37,8 @@ import { CVideojuegoFormComponent } from './menu/forms/videojuego/c-videojuego-f
 import { RUDVideojuegoFormComponent } from './menu/forms/videojuego/rud-videojuego-form/rud-videojuego-form.component';
 import { CRecompensaFormComponent } from './menu/forms/recompensa/c-recompensa-form/c-recompensa-form.component';
 import { RUDRecompensaFormComponent } from './menu/forms/recompensa/rud-recompensa-form/rud-recompensa-form.component';
+import { NotifJugadorFormComponent } from './menu/forms/notificar/notif-jugador-form/notif-jugador-form.component';
+import { NotifRecompensaFormComponent } from './menu/forms/notificar/notif-recompensa-form/notif-recompensa-form.component';
 
 
 
@@ -52,7 +54,9 @@ import { RUDRecompensaFormComponent } from './menu/forms/recompensa/rud-recompen
     CVideojuegoFormComponent,
     RUDVideojuegoFormComponent,
     CRecompensaFormComponent,
-    RUDRecompensaFormComponent
+    RUDRecompensaFormComponent,
+    NotifJugadorFormComponent,
+    NotifRecompensaFormComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,38 @@
+<mat-card-title>
+  {{menu.name}}
+</mat-card-title>
+
+<form novalidate #Form="ngForm" (ngSubmit)="onSubmit()">
+  
+  <p>
+    <mat-form-field>
+      <mat-select placeholder="Jugador"
+      name="jugador" #jugador="ngModel" [(ngModel)]="data.jugador" required>
+      <mat-option *ngFor="let jugador of jugadores" [value]="jugador._id">
+        {{jugador.titulo}}
+      </mat-option>
+    </mat-select>
+    <mat-error *ngIf="jugador.errors?.required">Campo obligatorio</mat-error>
+    </mat-form-field>
+  </p>
+
+  <p>
+    <mat-form-field>
+      <mat-select placeholder="Videojuego"
+      name="videojuego" #videojuego="ngModel" [(ngModel)]="data.videojuego" required>
+      <mat-option *ngFor="let videojuego of videojuegos" [value]="videojuego._id">
+        {{videojuego.titulo}}
+      </mat-option>
+    </mat-select>
+    <mat-error *ngIf="videojuego.errors?.required">Campo obligatorio</mat-error>
+    </mat-form-field>
+  </p>
+  
+  <div>
+    <div>
+      <button mat-button type="button" routerLink="/menu">Cancelar</button>
+      <button mat-flat-button [disabled]="Form.form.invalid" type="submit">Aceptar</button>
+    </div>
+  </div>
+
+</form>
