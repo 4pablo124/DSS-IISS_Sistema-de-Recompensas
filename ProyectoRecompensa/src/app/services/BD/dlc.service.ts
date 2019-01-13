@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { DLC } from '../../clases/Elementos/dlc'
+import { DLC } from '../../clases/Elementos/dlc';
+import { Observable } from 'rxjs';
 import { iBD } from './iBD';
 
 @Injectable({
@@ -20,7 +21,15 @@ export class DlcService implements iBD{
       videojuego: dlc.videojuego
     };
     this.http.post(`${this.uri}/add`, dlcJSON)
-      .subscribe(res => console.log('Done'));
+      .subscribe(res => console.log(dlc));
+  }
+
+  findAll(): Observable<DLC[]>{
+    return this.http.get<DLC[]>(`${this.uri}/findAll`);
+  }
+
+  find(dlc: DLC): Observable<DLC>{
+    return this.http.get<DLC>(`${this.uri}/find/${dlc._id}`);
   }
 
   findAll(){}

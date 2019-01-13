@@ -8,7 +8,7 @@ recompensaRoutes.route('/add').post(function (req, res){
     // Create a Recompensa
     let recompensa = new Recompensa(req.body);
  
-    // Guarda recomensa en MongoDB
+    // Guarda recompensa en MongoDB
     recompensa.save()
         .then(data => {
             res.status(200).json(data);

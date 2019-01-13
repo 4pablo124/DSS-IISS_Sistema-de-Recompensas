@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuService } from 'src/app/services/menu.service';
 import { iMenu } from 'src/app/clases/Menus/iMenu';
+import { DlcService } from 'src/app/services/BD/dlc.service';
 
 @Component({
   selector: 'app-r-dlc-form',
@@ -9,32 +10,19 @@ import { iMenu } from 'src/app/clases/Menus/iMenu';
 })
 export class RDlcFormComponent implements OnInit {
 
+  constructor(private menuService: MenuService, private bd: DlcService) { }
+
   menu: iMenu;
 
-  dlcs = [
-    {
-      titulo: 'pack de mapas 1',
-      descripcion: 'ta un monton de chulo',
-      videojuego: 'bioimpacto'
-    },
-    {
-      titulo: 'pack de mapas 2',
-      descripcion: 'es puta mierda',
-      videojuego: 'campo de batalla'
-    },
-    {
-      titulo: 'pack de mapas 3',
-      descripcion: 'ta oc',
-      videojuego: 'llamada del deber: operacion negra'
-    }
-  ];
+  dlcs: any[];
 
-  data = {titulo: '', descripcion: '', videojuego: ''};
+  data = {_id: '', titulo: '', descripcion: '', videojuego: ''};
 
-  constructor(private menuService: MenuService) { }
+  
 
   ngOnInit() {
     this.menu = this.menuService.selectedMenu;
+    this.bd.findAll().subscribe(dlcs => this.dlcs = dlcs);
   }
 
 }

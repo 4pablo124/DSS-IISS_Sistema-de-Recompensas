@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Jugador } from '../../clases/Elementos/jugador'
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 import { iBD } from './iBD';
 
 @Injectable({
@@ -22,7 +23,15 @@ export class JugadorService implements iBD{
       fechaNacimiento: jugador.fechaNacimiento
     };
     this.http.post(`${this.uri}/add`, jugadorJSON)
-      .subscribe(res => console.log('Done'));
+      .subscribe(res => console.log(jugador));
+  }
+
+  findAll(): Observable<Jugador[]>{
+    return this.http.get<Jugador[]>(`${this.uri}/findAll`);
+  }
+
+  find(jugador: Jugador): Observable<Jugador>{
+    return this.http.get<Jugador>(`${this.uri}/find/${jugador._id}`);
   }
 
   findAll(){}
