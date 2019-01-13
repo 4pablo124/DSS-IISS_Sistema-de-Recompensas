@@ -36,7 +36,7 @@ export class RUDRecompensaFormComponent implements OnInit {
   recompensas: any[];
   videojuegos: any[];
 
-  data = {_id: '', titulo: '', descripcion: '', dificultad: '', videojuego: ''}
+  data = {titulo: '', descripcion: '', dificultad: '', videojuego: ''}
 
 
   ngOnInit() {
@@ -54,7 +54,7 @@ export class RUDRecompensaFormComponent implements OnInit {
   }
 
   borrar(){
-    this.bd.delete(this.data);
+    this.menuD.action(this.data,this.bd);
     this.router.navigate(['/menu']);
     this.snackBar.open('Recompensa borrada correctamente :)', '', { duration: 2000, });
   }

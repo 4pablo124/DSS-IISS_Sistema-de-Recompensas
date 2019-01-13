@@ -3,6 +3,8 @@ const app = express();
 const videojuegoRoutes = express.Router();
 
 const Videojuego = require('../models/videojuego.model');
+const Dlc = require('../models/dlc.model');
+const Recompensa = require('../models/recompensa.model');
 
 videojuegoRoutes.route('/add').post(function (req, res){
     // Create a Videojuego
@@ -79,6 +81,49 @@ videojuegoRoutes.route('/update/:videojuegoId').put(function (req, res) {
 });
 
 videojuegoRoutes.route('/delete/:videojuegoId').delete(function (req, res) {
+    //borra dlcs asociados
+    Dlc.remove({videojuego: req.params.videojuegoId})
+    .then(dlc => {
+        if(!dlc) {
+            return res.status(404).json({
+                msg: "Dlc no encontrado con videojuego " + req.params.videojuegoId
+            })
+        }
+        res.json({msg: "Dlc borrado correctamente!"});
+    })
+    
+    .catch(err => {
+        if(err.kind === 'ObjectId' || err.name === 'NotFound') {
+            return res.status(404).json({
+                msg: "Dlc no encontrado con videojuego " + req.params.videojuegoId
+            });                
+        }
+        return res.status(500).json({
+            msg: "Could not delete Dlc con id " + req.params.videojuegoId
+        });
+    });
+
+    Recompensa.remove({videojuego: req.params.videojuegoId})
+    .then(recompensa => {
+        if(!recompensa) {
+            return res.status(404).json({
+                msg: "Recompensa no encontrado con videojuego " + req.params.videojuegoId
+            })
+        }
+        res.json({msg: "Recompensa borrado correctamente!"});
+    })
+    
+    .catch(err => {
+        if(err.kind === 'ObjectId' || err.name === 'NotFound') {
+            return res.status(404).json({
+                msg: "Recompensa no encontrado con videojuego " + req.params.videojuegoId
+            });                
+        }
+        return res.status(500).json({
+            msg: "Could not delete recompensa con id " + req.params.videojuegoId
+        });
+    });
+
     Videojuego.findByIdAndRemove(req.params.videojuegoId)
     .then(videojuego => {
         if(!videojuego) {
