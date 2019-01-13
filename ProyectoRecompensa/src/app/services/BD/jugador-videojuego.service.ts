@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
-import { JugadorVideojuego } from '../../clases/Elementos/jugador'
+import { JugadorVideojuego } from '../../clases/Elementos/jugadorVideojuego'
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
 import { iBD } from './iBD';
 
 @Injectable({
@@ -24,7 +23,7 @@ export class JugadorVideojuegoService implements iBD{
   }
 
   findAll(){}
-  find(jugador: Jugador){}
-  update(jugador: Jugador){}
-  delete(jugador: Jugador){}
+  find(jugadorVideojuego: JugadorVideojuego){}
+  update(jugadorVideojuego: JugadorVideojuego){}
+  delete(jugadorVideojuego: JugadorVideojuego){}
 }
