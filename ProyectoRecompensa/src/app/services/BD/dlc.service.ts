@@ -22,4 +22,8 @@ export class DlcService implements iBD{
     this.http.post(`${this.uri}/add`, dlcJSON)
       .subscribe(res => console.log('Done'));
   }
+
+  findAll(){}
+  update(dlc: DLC){}
+  delete(dlc: DLC){}
 }

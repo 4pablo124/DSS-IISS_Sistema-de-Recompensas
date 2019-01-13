@@ -24,4 +24,8 @@ export class JugadorService implements iBD{
     this.http.post(`${this.uri}/add`, jugadorJSON)
       .subscribe(res => console.log('Done'));
   }
+
+  findAll(){}
+  update(jugador: Jugador){}
+  delete(jugador: Jugador){}
 }

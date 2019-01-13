@@ -23,4 +23,8 @@ export class VideojuegoService implements iBD{
     this.http.post(`${this.uri}/add`, videojuegoJSON)
       .subscribe(res => console.log('Done'));
   }
+
+  findAll(){}
+  update(videojuego: Videojuego){}
+  delete(videojuego: Videojuego){}
 }
