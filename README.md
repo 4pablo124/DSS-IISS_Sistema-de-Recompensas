@@ -9,7 +9,7 @@ Desarrollado por **Alejandro Romero Navarrete** y **Pablo de los Ríos Gestoso**
 ### Diseño preliminar
 ​	![Diseño Preliminar](Disenyo/Disenyo_Preliminar.png)
 
-### Diseño con patrones (incompleto)
+### Diseño con patrones
 ​	![Diseño Patrones](Disenyo/Disenyo.png)
 
 
