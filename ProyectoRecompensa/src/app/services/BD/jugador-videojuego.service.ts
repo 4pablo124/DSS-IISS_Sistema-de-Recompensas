@@ -23,7 +23,7 @@ export class JugadorVideojuegoService implements iBD{
   }
 
   findAll(){}
-  find(jugador: JugadorVideojuego){}
-  update(jugador: JugadorVideojuego){}
-  delete(jugador: JugadorVideojuego){}
+  find(jugadorVideojuego: JugadorVideojuego){}
+  update(jugadorVideojuego: JugadorVideojuego){}
+  delete(jugadorVideojuego: JugadorVideojuego){}
 }
