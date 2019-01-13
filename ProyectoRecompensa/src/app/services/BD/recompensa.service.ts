@@ -29,13 +29,13 @@ export class RecompensaService implements iBD{
     return this.http.get<any[]>(`${this.uri}/findAll`)
   }
 
-  update(recompensa: any): Observable<any>{
-    return this.http.put<any>(`${this.uri}/update/${recompensa._id}`,recompensa)
+  update(recompensa: any) {
+    this.http.put<any>(`${this.uri}/update/${recompensa._id}`,recompensa)
       .subscribe(res => console.log(recompensa, 'Ha sido actualizada con exito'));;
   }
 
-  delete(recompensa: any): Observable<any>{
-    return this.http.delete<any>(`${this.uri}/delete/${recompensa._id}`)
+  delete(recompensa: any) {
+    this.http.delete<any>(`${this.uri}/delete/${recompensa._id}`)
       .subscribe(res => console.log(recompensa, 'Ha sido borrada con exito'));
   }
 }

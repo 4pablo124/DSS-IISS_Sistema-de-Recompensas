@@ -32,7 +32,6 @@ export class DlcService implements iBD{
     return this.http.get<DLC>(`${this.uri}/find/${dlc._id}`);
   }
 
-  findAll(){}
   update(dlc: DLC){}
   delete(dlc: DLC){}
 }

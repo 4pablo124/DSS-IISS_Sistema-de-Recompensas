@@ -34,7 +34,6 @@ export class JugadorService implements iBD{
     return this.http.get<Jugador>(`${this.uri}/find/${jugador._id}`);
   }
 
-  findAll(){}
   update(jugador: Jugador){}
   delete(jugador: Jugador){}
 }
