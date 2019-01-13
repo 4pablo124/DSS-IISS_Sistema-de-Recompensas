@@ -2,7 +2,7 @@
   {{menu.name}}
 </mat-card-title>
 
-<form novalidate #Form="ngForm" (ngSubmit)="onSubmit()">
+<form novalidate #Form="ngForm" (ngSubmit)="onSubmit(); Form.resetForm();">
   <p>
     <mat-form-field>
       <input matInput placeholder="Título"

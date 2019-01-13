@@ -18,6 +18,7 @@ import { FormsModule , ReactiveFormsModule} from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 
 import { MenuService } from './services/menu.service';
@@ -68,6 +69,7 @@ import { RUDRecompensaFormComponent } from './menu/forms/recompensa/rud-recompen
     ReactiveFormsModule,
     MatSelectModule,
     MatCheckboxModule,
+    MatSnackBarModule,
     AppRoutingModule,
     HttpClientModule
   ],

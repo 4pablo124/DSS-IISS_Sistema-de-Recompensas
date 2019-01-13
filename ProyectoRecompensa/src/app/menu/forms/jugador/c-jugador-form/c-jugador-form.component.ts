@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { iMenu } from 'src/app/clases/Menus/iMenu';
 import { MenuService } from 'src/app/services/menu.service';
 import { JugadorService } from 'src/app/services/BD/jugador.service';
+import { MatSnackBar } from '@angular/material';
+
 
 @Component({
   selector: 'app-c-jugador-form',
@@ -15,7 +17,8 @@ export class CJugadorFormComponent implements OnInit {
   menu: iMenu;
 
   constructor(private menuService: MenuService,
-              private bd: JugadorService 
+              private bd: JugadorService,
+              public snackBar: MatSnackBar  
   ){}
 
   ngOnInit() {
@@ -24,5 +27,6 @@ export class CJugadorFormComponent implements OnInit {
 
   onSubmit(){
     this.menu.action(this.data, this.bd);
+    this.snackBar.open('Jugador creado correctamente :)', '', { duration: 2000, });
   }
 }

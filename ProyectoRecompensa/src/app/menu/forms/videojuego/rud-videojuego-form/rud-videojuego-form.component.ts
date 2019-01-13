@@ -4,7 +4,9 @@ import { iMenu } from 'src/app/clases/Menus/iMenu';
 import { sDispositivo, sGenero } from 'src/app/clases/Elementos/enumerados';
 import { FormControl} from '@angular/forms';
 import { VideojuegoService } from 'src/app/services/BD/videojuego.service';
+import { MatSnackBar } from '@angular/material';
 import { Router } from '@angular/router';
+
 
 
 @Component({
@@ -16,7 +18,9 @@ export class RUDVideojuegoFormComponent implements OnInit {
 
   constructor(private menuService: MenuService, 
               private bd: VideojuegoService,
-              private router: Router) { }
+              public snackBar: MatSnackBar,
+              private router: Router  
+  ) { }
 
   menu: iMenu;
 
@@ -49,11 +53,12 @@ export class RUDVideojuegoFormComponent implements OnInit {
   borrar(){
     this.bd.delete(this.data);
     this.router.navigate(['/menu']);
-
+    this.snackBar.open('Videojuego borrado correctamente :)', '', { duration: 2000, });
   }
 
   onSubmit(){
     this.menuU.action(this.data, this.bd);
     this.router.navigate(['/menu']);
+    this.snackBar.open('Videojuego actualizado correctamente :)', '', { duration: 2000, });
   }
 }

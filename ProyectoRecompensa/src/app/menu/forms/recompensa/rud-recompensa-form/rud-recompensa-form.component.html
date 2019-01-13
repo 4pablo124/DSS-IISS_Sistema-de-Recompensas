@@ -46,9 +46,13 @@
 
   <p>
     <mat-form-field>
-      <input matInput placeholder="Videojuego"
-      name="videojuego" #videojuego="ngModel" type="text" [(ngModel)]="data.videojuego" required [disabled]='!modificable.value'>
-      <mat-error *ngIf="videojuego.errors?.required">Campo obligatorio</mat-error>
+      <mat-select placeholder="Videojuego"
+      name="videojuego" #videojuego="ngModel" [(ngModel)]="data.videojuego" required [disabled]='!modificable.value'>
+      <mat-option *ngFor="let videojuego of videojuegos" [value]="videojuego._id">
+        {{videojuego.titulo}}
+      </mat-option>
+    </mat-select>
+    <mat-error *ngIf="videojuego.errors?.required">Campo obligatorio</mat-error>
     </mat-form-field>
   </p>
   
