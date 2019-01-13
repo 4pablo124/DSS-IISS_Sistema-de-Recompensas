@@ -6,7 +6,7 @@ let jugador = new Schema({
         apellidos: String,
         nickname: String,
         email: String,
-        fechaNacimiento: Date
+        fechaNacimiento: String
 }, {
         collection: 'jugadores'
     }

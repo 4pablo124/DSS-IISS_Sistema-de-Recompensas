@@ -36,7 +36,7 @@
     <p>
       <mat-form-field>
         <input matInput placeholder="Fecha de Nacimiento"
-        name="fechaNacimiento" #fechaNacimiento="ngModel" type="date" [(ngModel)]="data.fechaNacimiento" required>
+        name="fechaNacimiento" #fechaNacimiento="ngModel" type="date" format="dd/mm/yyyy" [(ngModel)]="data.fechaNacimiento" required>
         <mat-error *ngIf="fechaNacimiento.errors?.required">Campo obligatorio</mat-error>
       </mat-form-field>
     </p>

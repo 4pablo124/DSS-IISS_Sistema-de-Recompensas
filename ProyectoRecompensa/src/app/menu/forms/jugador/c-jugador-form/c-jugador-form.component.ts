@@ -10,7 +10,7 @@ import { JugadorService } from 'src/app/services/BD/jugador.service';
 })
 export class CJugadorFormComponent implements OnInit {
 
-  data = {nombre: '', apellidos: '', nickname: '', email: '', fechaNacimiento: Date}
+  data = {nombre: '', apellidos: '', nickname: '', email: '', fechaNacimiento: ''}
 
   menu: iMenu;
 

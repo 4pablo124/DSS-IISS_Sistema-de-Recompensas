@@ -16,11 +16,11 @@ export class RJugadorFormComponent implements OnInit {
 
   jugadores: any[];
 
-  data = {_id: '', nombre: '', apellidos: '', nickname: '', email: '', fechaNacimiento: Date};
-
-
+  data = {_id: '', nombre: '', apellidos: '', nickname: '', email: '', fechaNacimiento: ''};
+  
   ngOnInit() {
     this.menu = this.menuService.selectedMenu;
     this.bd.findAll().subscribe(jugadores => this.jugadores = jugadores);
+    
   }
 }

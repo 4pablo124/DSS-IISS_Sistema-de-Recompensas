@@ -6,7 +6,7 @@ export class Jugador
         private _apellidos: string,
         private _nickname: string,
         private _email: string,
-        private _fechaNacimiento: Date
+        private _fechaNacimiento: string
     ){}
 
     get _id(): string {return this.id;}
@@ -14,12 +14,12 @@ export class Jugador
     get apellidos(): string {return this._apellidos;}
     get nickname(): string {return this._nickname;}
     get email(): string {return this._email;}
-    get fechaNacimiento(): Date {return this._fechaNacimiento;}
+    get fechaNacimiento(): string {return this._fechaNacimiento;}
 
     set _id(id: string) {this.id = id;}
     set nombre(nombre: string) {this._nombre = nombre;}
     set apellidos(apellidos: string) {this._apellidos = apellidos;}
     set nickname(nickname: string) {this._nickname = nickname;}
     set email(email: string) {this._email = email;}
-    set fechaNacimiento(fechaNacimeinto: Date) {this._fechaNacimiento = fechaNacimeinto;}
+    set fechaNacimiento(fechaNacimeinto: string) {this._fechaNacimiento = fechaNacimeinto;}
 }
