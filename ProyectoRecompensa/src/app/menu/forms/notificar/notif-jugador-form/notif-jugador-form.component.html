@@ -9,7 +9,7 @@
       <mat-select placeholder="Jugador"
       name="jugador" #jugador="ngModel" [(ngModel)]="data.jugador" required>
       <mat-option *ngFor="let jugador of jugadores" [value]="jugador._id">
-        {{jugador.titulo}}
+        {{jugador.nickname}}
       </mat-option>
     </mat-select>
     <mat-error *ngIf="jugador.errors?.required">Campo obligatorio</mat-error>

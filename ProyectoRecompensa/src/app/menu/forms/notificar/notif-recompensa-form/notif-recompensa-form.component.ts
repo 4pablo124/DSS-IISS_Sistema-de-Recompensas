@@ -23,7 +23,7 @@ export class NotifRecompensaFormComponent implements OnInit {
   constructor(private menuService: MenuService,
               private bdR: RecompensaService,
               private bdV: VideojuegoService,
-              private bdN: RecompensaVideojuegoService,
+             // private bdN: RecompensaVideojuegoService,
               public snackBar: MatSnackBar,
               private router: Router
   ) {}
@@ -40,7 +40,7 @@ export class NotifRecompensaFormComponent implements OnInit {
   }
 
   onSubmit(){
-    this.menu.action(this.data,this.bdN);
+   // this.menu.action(this.data,this.bdN);
     this.router.navigate(['/menu']);
     this.snackBar.open('Jugador notificado correctamente :)', '', { duration: 2000, });
   }

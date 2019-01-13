@@ -8,6 +8,8 @@ import { CVideojuegoFormComponent } from "../menu/forms/videojuego/c-videojuego-
 import { RUDVideojuegoFormComponent } from "../menu/forms/videojuego/rud-videojuego-form/rud-videojuego-form.component";
 import { CRecompensaFormComponent } from "../menu/forms/recompensa/c-recompensa-form/c-recompensa-form.component";
 import { RUDRecompensaFormComponent } from "../menu/forms/recompensa/rud-recompensa-form/rud-recompensa-form.component";
+import { NotifJugadorFormComponent } from "../menu/forms/notificar/notif-jugador-form/notif-jugador-form.component";
+import { NotifRecompensaFormComponent } from "../menu/forms/notificar/notif-recompensa-form/notif-recompensa-form.component";
 
 
 
@@ -23,5 +25,7 @@ export const routes: Routes = [
     { path: 'rudVideojuego', component: RUDVideojuegoFormComponent },
     { path: 'cRecompensa', component: CRecompensaFormComponent },
     { path: 'rudRecompensa', component: RUDRecompensaFormComponent },
+    { path: 'notifJugador', component:  NotifJugadorFormComponent},
+    { path: 'notifRecompensa', component: NotifRecompensaFormComponent },
     { path: '', redirectTo: '/menu', pathMatch: 'full' }
 ];

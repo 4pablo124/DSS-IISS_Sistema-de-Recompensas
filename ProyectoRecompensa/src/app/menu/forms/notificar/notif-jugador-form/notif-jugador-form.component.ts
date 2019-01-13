@@ -5,6 +5,7 @@ import { JugadorService } from 'src/app/services/BD/jugador.service';
 import { VideojuegoService } from 'src/app/services/BD/videojuego.service';
 import { MatSnackBar } from '@angular/material';
 import { Router } from '@angular/router';
+import { JugadorVideojuegoService } from 'src/app/services/BD/jugador-videojuego.service';
 
 @Component({
   selector: 'app-notif-jugador-form',
