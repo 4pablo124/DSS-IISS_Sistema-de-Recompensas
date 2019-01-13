@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Recompensa } from 'src/app/clases/Elementos/recompensa';
 import { Observable } from 'rxjs';
 import { iBD } from './iBD';
 
@@ -14,7 +13,7 @@ export class RecompensaService implements iBD{
 
   constructor(private http: HttpClient) { }
 
-  add(recompensa: Recompensa) {
+  add(recompensa: any) {
     const recompensaJSON = {
       titulo: recompensa.titulo,
       descripcion: recompensa.descripcion,
@@ -22,22 +21,21 @@ export class RecompensaService implements iBD{
       videojuego: recompensa.videojuego
     };
     this.http.post(`${this.uri}/add`, recompensaJSON)
-      .subscribe(res => console.log(recompensa));
+      .subscribe(res => console.log(recompensa, 'Ha sido creada con exito'));
+
   }
 
-  findAll(): Observable<Recompensa[]>{
-    return this.http.get<Recompensa[]>(`${this.uri}/findAll`);
+  findAll(): Observable<any[]>{
+    return this.http.get<any[]>(`${this.uri}/findAll`)
   }
 
-  find(recompensa: Recompensa): Observable<Recompensa>{
-    return this.http.get<Recompensa>(`${this.uri}/find/${recompensa._id}`);
+  update(recompensa: any): Observable<any>{
+    return this.http.put<any>(`${this.uri}/update/${recompensa._id}`,recompensa)
+      .subscribe(res => console.log(recompensa, 'Ha sido actualizada con exito'));;
   }
 
-  update(recompensa: Recompensa): Observable<Recompensa>{
-    return this.http.put<Recompensa>(`${this.uri}/update/${recompensa._id}`,recompensa);
-  }
-
-  delete(recompensa: Recompensa): Observable<Recompensa>{
-    return this.http.delete<Recompensa>(`${this.uri}/delete/${recompensa._id}`);
+  delete(recompensa: any): Observable<any>{
+    return this.http.delete<any>(`${this.uri}/delete/${recompensa._id}`)
+      .subscribe(res => console.log(recompensa, 'Ha sido borrada con exito'));
   }
 }
