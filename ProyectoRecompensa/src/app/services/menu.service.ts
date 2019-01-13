@@ -63,13 +63,22 @@ export class MenuService {
     let menu_notif_recompensa = new MenuEspecifico("Notificar obtencion de recompensa de un videojuego", "/notifRecompensa", new Command_Notif());
     let menu_notificar = new MenuGenerico("Notificar", [menu_notif_jugador, menu_notif_recompensa]);
 
+    // Estadisticas
+    let menu_stats_JugVid = new MenuEspecifico("Consultar jugadores por videojuego", "/statJugVid", new Command_R());
+    let menu_stats_RecVid = new MenuEspecifico("Consultar estadisticas de las recompensas por videojuego", "/statJugRec", new Command_R());
+    let menu_stats_JudVid100 = new MenuEspecifico("Consultar jugadores que han completado cada videojuego", "/statJugVid100", new Command_R());
+    let menu_stats = new MenuGenerico("Estadisticas", [menu_stats_JugVid, menu_stats_RecVid, menu_stats_JudVid100]);
+    
+
+
     // MENU PRINCIPAL
     let menuPrincipal = new MenuGenerico("Menu Principal", [
       menu_cr_dlc,
       menu_crud_videojuego,
       menu_cr_jugador,
       menu_crud_recompensa,
-      menu_notificar
+      menu_notificar,
+      menu_stats
     ]);
 
     this._menuPrincipal = menuPrincipal;
