@@ -9,7 +9,7 @@ import { iBD } from './iBD';
 })
 export class JugadorService implements iBD{
 
-  uri = 'http://localhost:4000/addJugador';
+  uri = 'http://localhost:4000/jugador';
 
   constructor(private http: HttpClient) { }
 

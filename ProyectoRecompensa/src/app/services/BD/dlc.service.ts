@@ -9,7 +9,7 @@ import { iBD } from './iBD';
 })
 export class DlcService implements iBD{
 
-  uri = 'http://localhost:4000/addDLC';
+  uri = 'http://localhost:4000/dlc';
 
   constructor(private http: HttpClient) { }
 
