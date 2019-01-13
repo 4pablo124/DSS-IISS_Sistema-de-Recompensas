@@ -43,9 +43,3 @@ Tenemos una interfaz `iCommand` con un único método `execute()` este método s
 El objetivo final es el de desacoplar la clase que pide una accion de aquella que realmente la realiza. Todo mediante una interfaz génerica.
 
 Nos crea el inconveniente de muchas clases extras y puede dificultar la legibilidad del codigo, pero si mantenemos la lógica de los comandos simples, no es mas que un paso intermedio entre dos clases.
-
-### Iterator (aun por ver)
-
-El patrón iterator nos permite hacer uso de del listado de DLCs, recompensas, jugadores y videojuegos mediante una única interfaz abstraída de la implementación.  Así nos es indiferente que tipo de objeto estemos almacenando, y podremos cambiar la estructura del listado sin afectar a las clases que hagan uso de él.
-
-
