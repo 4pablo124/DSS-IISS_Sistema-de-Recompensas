@@ -16,5 +16,6 @@ export class MenuEspecifico implements iMenu{
     get options(): iMenu[] { return this._options; }
 
     action(data?: any, db?: iBD): any{ 
-        return this._command.execute(data, db); }
+        return this._command.execute(data, db);
+    }
 }

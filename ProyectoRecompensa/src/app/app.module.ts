@@ -27,17 +27,15 @@ import { RecompensaService } from './services/BD/recompensa.service';
 import { VideojuegoService } from './services/BD/videojuego.service';
 
 import { MenuComponent } from './menu/menu.component';
+import { MenuGenericoFormComponent } from './menu/forms/menu-generico-form/menu-generico-form.component';
 import { CDlcFormComponent } from './menu/forms/dlc/c-dlc-form/c-dlc-form.component';
 import { RDlcFormComponent } from './menu/forms/dlc/r-dlc-form/r-dlc-form.component';
 import { CJugadorFormComponent } from './menu/forms/jugador/c-jugador-form/c-jugador-form.component';
 import { RJugadorFormComponent } from './menu/forms/jugador/r-jugador-form/r-jugador-form.component';
-import { MenuGenericoFormComponent } from './menu/forms/menu-generico-form/menu-generico-form.component';
 import { CVideojuegoFormComponent } from './menu/forms/videojuego/c-videojuego-form/c-videojuego-form.component';
-import { RVideojuegoFormComponent } from './menu/forms/videojuego/r-videojuego-form/r-videojuego-form.component';
-import { DVideojuegoFormComponent } from './menu/forms/videojuego/d-videojuego-form/d-videojuego-form.component';
+import { RUDVideojuegoFormComponent } from './menu/forms/videojuego/rud-videojuego-form/rud-videojuego-form.component';
 import { CRecompensaFormComponent } from './menu/forms/recompensa/c-recompensa-form/c-recompensa-form.component';
-import { RRecompensaFormComponent } from './menu/forms/recompensa/r-recompensa-form/r-recompensa-form.component';
-import { DRecompensaFormComponent } from './menu/forms/recompensa/d-recompensa-form/d-recompensa-form.component';
+import { RUDRecompensaFormComponent } from './menu/forms/recompensa/rud-recompensa-form/rud-recompensa-form.component';
 
 
 
@@ -45,17 +43,15 @@ import { DRecompensaFormComponent } from './menu/forms/recompensa/d-recompensa-f
   declarations: [
     AppComponent,
     MenuComponent,
-    CDlcFormComponent,
-    CJugadorFormComponent,
-    CRecompensaFormComponent,
-    CVideojuegoFormComponent,
-    RDlcFormComponent,
-    RJugadorFormComponent,
     MenuGenericoFormComponent,
-    RVideojuegoFormComponent,
-    DVideojuegoFormComponent,
-    RRecompensaFormComponent,
-    DRecompensaFormComponent
+    CDlcFormComponent,
+    RDlcFormComponent,
+    CJugadorFormComponent,
+    RJugadorFormComponent,
+    CVideojuegoFormComponent,
+    RUDVideojuegoFormComponent,
+    CRecompensaFormComponent,
+    RUDRecompensaFormComponent
   ],
   imports: [
     BrowserModule,

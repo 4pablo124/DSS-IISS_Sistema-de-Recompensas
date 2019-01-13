@@ -1,13 +1,13 @@
 import { iMenu } from "./iMenu";
 
 export class MenuGenerico implements iMenu {
-  protected _route: string;
-
+  
   constructor(
     protected _name: string,
-    protected _options: iMenu[]
+    protected _options: iMenu[],
+    protected _route?: string
   ){
-    this._route = '/menu';
+      this._route = _route ? _route : '/menu';  // si no se le asigna ruta, por defecto es /menu
   }
 
   get route(): string { return this._route; }
