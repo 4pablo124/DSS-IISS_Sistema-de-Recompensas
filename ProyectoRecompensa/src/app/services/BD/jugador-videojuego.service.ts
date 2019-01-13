@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { JugadorVideojuego } from '../../clases/Elementos/jugadorVideojuego'
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 import { iBD } from './iBD';
 
 @Injectable({
@@ -23,7 +24,9 @@ export class JugadorVideojuegoService implements iBD{
   }
 
   findAll(){}
-  find(jugadorVideojuego: JugadorVideojuego){}
+  find(videojuegoID: string): Observable<JugadorVideojuego[]>{
+    return this.http.get<JugadorVideojuego[]>(`${this.uri}/find/${videojuegoID}`)
+  }
   update(jugadorVideojuego: JugadorVideojuego){}
   delete(jugadorVideojuego: JugadorVideojuego){}
 }

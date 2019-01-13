@@ -19,4 +19,17 @@ jugadorVideojuegoRoutes.route('/add').post(function (req, res){
         });
 });
 
+jugadorVideojuegoRoutes.route('/find/:videojuegoId').get(function (req, res) {
+    JugadorVideojuego.find({videojuego : req.params.videojuegoId})
+    .then(jugadorVideojuego => {
+        res.json(jugadorVideojuego);
+    })
+    
+    .catch(err => {
+        return res.status(500).json({
+            msg: err.message
+        });
+    });
+});
+
 module.exports = jugadorVideojuegoRoutes;
