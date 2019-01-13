@@ -35,7 +35,7 @@ export class RUDVideojuegoFormComponent implements OnInit {
 
   videojuegos: any[];
 
-  data = {_id: '', titulo: '', descripcion: '', genero: '', dispositivo: ''};
+  data = {titulo: '', descripcion: '', genero: '', dispositivo: ''};
 
   ngOnInit() {
     this.menu = this.menuService.selectedMenu;
@@ -51,7 +51,7 @@ export class RUDVideojuegoFormComponent implements OnInit {
   }
 
   borrar(){
-    this.bd.delete(this.data);
+    this.menuD.action(this.data,this.bd);
     this.router.navigate(['/menu']);
     this.snackBar.open('Videojuego borrado correctamente :)', '', { duration: 2000, });
   }
