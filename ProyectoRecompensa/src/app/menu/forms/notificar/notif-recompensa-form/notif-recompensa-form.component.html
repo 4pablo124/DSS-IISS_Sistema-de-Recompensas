@@ -6,6 +6,18 @@
   
   <p>
     <mat-form-field>
+      <mat-select placeholder="Jugador"
+      name="jugador" #jugador="ngModel" [(ngModel)]="data.jugador" required>
+      <mat-option *ngFor="let jugador of jugadores" [value]="jugador._id">
+        {{jugador.nickname}}
+      </mat-option>
+    </mat-select>
+    <mat-error *ngIf="jugador.errors?.required">Campo obligatorio</mat-error>
+    </mat-form-field>
+  </p>
+  
+  <p>
+    <mat-form-field>
       <mat-select placeholder="Recompensa"
       name="recompensa" #recompensa="ngModel" [(ngModel)]="data.recompensa" required>
       <mat-option *ngFor="let recompensa of recompensas" [value]="recompensa._id">
@@ -16,17 +28,6 @@
     </mat-form-field>
   </p>
 
-  <p>
-    <mat-form-field>
-      <mat-select placeholder="Videojuego"
-      name="videojuego" #videojuego="ngModel" [(ngModel)]="data.videojuego" required>
-      <mat-option *ngFor="let videojuego of videojuegos" [value]="videojuego._id">
-        {{videojuego.titulo}}
-      </mat-option>
-    </mat-select>
-    <mat-error *ngIf="videojuego.errors?.required">Campo obligatorio</mat-error>
-    </mat-form-field>
-  </p>
   
   <div>
     <div>
