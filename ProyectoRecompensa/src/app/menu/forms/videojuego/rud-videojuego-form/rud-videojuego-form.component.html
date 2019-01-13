@@ -60,7 +60,7 @@
     <mat-checkbox [formControl]="modificable">Modificar</mat-checkbox>
     <div>
       <button mat-button type="button" routerLink="/menu">Cancelar</button>
-      <button mat-flat-button color="warn" *ngIf="!modificable.value">Borrar</button>
+      <button mat-flat-button type="button" color="warn" *ngIf="!modificable.value" (click)='borrar()'>Borrar</button>
       <button mat-flat-button [disabled]="Form.form.invalid" type="submit" *ngIf="modificable.value">Guardar</button>
     </div>
   </div>
