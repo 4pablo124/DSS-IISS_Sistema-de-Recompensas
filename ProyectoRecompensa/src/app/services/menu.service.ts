@@ -9,9 +9,7 @@ import { Command_C } from "../clases/Command/Command_C";
 import { Command_R } from "../clases/Command/Command_R";
 import { Command_U } from '../clases/Command/Command_U';
 import { Command_D } from "../clases/Command/Command_D";
-
-import { Command_Nuevo_Juego } from "../clases/Command//Command_Nuevo_Juego";
-import { Command_Nueva_Recompensa } from "../clases/Command//Command_Nueva_Recompensa";
+import { Command_Notif } from '../clases/Command/Command_Notif';
 
 import { Factory_DLC } from "../clases/Factory/Factory_DLC";
 import { Factory_Jugador } from "../clases/Factory/Factory_Jugador";
@@ -59,12 +57,28 @@ export class MenuService {
 
     let menu_crud_recompensa = new MenuGenerico("CRUD Recompensa", [menu_c_recompensa, menu_rud_recompensa]);
 
+
+    // Notificaciones
+    let menu_notif_jugador = new MenuEspecifico("Notificar nuevo jugador de un videojuego", "/notifJugador", new Command_Notif());
+    let menu_notif_recompensa = new MenuEspecifico("Notificar obtencion de recompensa de un videojuego", "/notifRecompensa", new Command_Notif());
+    let menu_notificar = new MenuGenerico("Notificar", [menu_notif_jugador, menu_notif_recompensa]);
+
+    // Estadisticas
+    let menu_stats_JugVid = new MenuEspecifico("Consultar jugadores por videojuego", "/statJugVid", new Command_R());
+    let menu_stats_RecVid = new MenuEspecifico("Consultar estadisticas de las recompensas por videojuego", "/statJugRec", new Command_R());
+    let menu_stats_JudVid100 = new MenuEspecifico("Consultar jugadores que han completado cada videojuego", "/statJugVid100", new Command_R());
+    let menu_stats = new MenuGenerico("Estadisticas", [menu_stats_JugVid, menu_stats_RecVid, menu_stats_JudVid100]);
+    
+
+
     // MENU PRINCIPAL
     let menuPrincipal = new MenuGenerico("Menu Principal", [
       menu_cr_dlc,
       menu_crud_videojuego,
       menu_cr_jugador,
-      menu_crud_recompensa
+      menu_crud_recompensa,
+      menu_notificar,
+      menu_stats
     ]);
 
     this._menuPrincipal = menuPrincipal;

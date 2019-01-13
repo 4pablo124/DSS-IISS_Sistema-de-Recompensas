@@ -8,6 +8,11 @@ import { CVideojuegoFormComponent } from "../menu/forms/videojuego/c-videojuego-
 import { RUDVideojuegoFormComponent } from "../menu/forms/videojuego/rud-videojuego-form/rud-videojuego-form.component";
 import { CRecompensaFormComponent } from "../menu/forms/recompensa/c-recompensa-form/c-recompensa-form.component";
 import { RUDRecompensaFormComponent } from "../menu/forms/recompensa/rud-recompensa-form/rud-recompensa-form.component";
+import { NotifJugadorFormComponent } from "../menu/forms/notificar/notif-jugador-form/notif-jugador-form.component";
+import { NotifRecompensaFormComponent } from "../menu/forms/notificar/notif-recompensa-form/notif-recompensa-form.component";
+import { JugadoresPorVideojuegoComponent } from "../menu/forms/stats/jugadores-por-videojuego/jugadores-por-videojuego.component";
+import { RecompensasPorVideojuegoComponent } from "../menu/forms/stats/recompensas-por-videojuego/recompensas-por-videojuego.component";
+import { JugadoresVideojuego100Component } from "../menu/forms/stats/jugadores-videojuego100/jugadores-videojuego100.component";
 
 
 
@@ -23,5 +28,10 @@ export const routes: Routes = [
     { path: 'rudVideojuego', component: RUDVideojuegoFormComponent },
     { path: 'cRecompensa', component: CRecompensaFormComponent },
     { path: 'rudRecompensa', component: RUDRecompensaFormComponent },
+    { path: 'notifJugador', component:  NotifJugadorFormComponent},
+    { path: 'notifRecompensa', component: NotifRecompensaFormComponent },
+    { path: 'statJugVid', component: JugadoresPorVideojuegoComponent },
+    { path: 'statJugRec', component: RecompensasPorVideojuegoComponent },
+    { path: 'statJugVid100', component: JugadoresVideojuego100Component },
     { path: '', redirectTo: '/menu', pathMatch: 'full' }
 ];
