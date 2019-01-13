@@ -19,6 +19,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatListModule } from '@angular/material/list';
 
 
 import { MenuService } from './services/menu.service';
@@ -39,6 +40,9 @@ import { CRecompensaFormComponent } from './menu/forms/recompensa/c-recompensa-f
 import { RUDRecompensaFormComponent } from './menu/forms/recompensa/rud-recompensa-form/rud-recompensa-form.component';
 import { NotifJugadorFormComponent } from './menu/forms/notificar/notif-jugador-form/notif-jugador-form.component';
 import { NotifRecompensaFormComponent } from './menu/forms/notificar/notif-recompensa-form/notif-recompensa-form.component';
+import { JugadoresPorVideojuegoComponent } from './menu/forms/stats/jugadores-por-videojuego/jugadores-por-videojuego.component';
+import { RecompensasPorVideojuegoComponent } from './menu/forms/stats/recompensas-por-videojuego/recompensas-por-videojuego.component';
+import { JugadoresVideojuego100Component } from './menu/forms/stats/jugadores-videojuego100/jugadores-videojuego100.component';
 
 
 
@@ -56,7 +60,10 @@ import { NotifRecompensaFormComponent } from './menu/forms/notificar/notif-recom
     CRecompensaFormComponent,
     RUDRecompensaFormComponent,
     NotifJugadorFormComponent,
-    NotifRecompensaFormComponent
+    NotifRecompensaFormComponent,
+    JugadoresPorVideojuegoComponent,
+    RecompensasPorVideojuegoComponent,
+    JugadoresVideojuego100Component
   ],
   imports: [
     BrowserModule,
@@ -75,7 +82,8 @@ import { NotifRecompensaFormComponent } from './menu/forms/notificar/notif-recom
     MatCheckboxModule,
     MatSnackBarModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    MatListModule
   ],
   providers: [
     MenuService,
