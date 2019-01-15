@@ -43,3 +43,15 @@ Tenemos una interfaz `iCommand` con un único método `execute()` este método s
 El objetivo final es el de desacoplar la clase que pide una accion de aquella que realmente la realiza. Todo mediante una interfaz génerica.
 
 Nos crea el inconveniente de muchas clases extras y puede dificultar la legibilidad del codigo, pero si mantenemos la lógica de los comandos simples, no es mas que un paso intermedio entre dos clases.
+
+### Observer
+
+El patrón observer lo hemos decidido aplicar al cálculo de las estadísticas del sistema.
+
+El motivo es que para el cálculo de estas es necesario acceder a una gran cantidad de datos de diferentes puntos del sistema, lo cual es una operación bastante costosa. Para aliviar esta carga hemos optado por implementar una clase intermedia en la que se guardarán los resultados de las estadísticas *(una clase para cada estadística que la necesite)* y asi las partes del sistema que necesiten estos datos pueden acceder directamente.
+
+Pero nos surge el problema de que si cualquiera de los datos de los que depende esta estadística cambia, la información quedaría desactualizada. Es aquí donde entra en juego el patrón Observer:
+ 
+Cada clase de la que dependa esta estadística implementará una interfaz `iSubject` y todas las estadísticas que dependan de alguna clase implementarán una interfaz `iObserver`.
+
+Cada clase `iSubject` guardará una referencia a todas las estadísticas que esten *observando* y cuando se produzca un cambio en sus datos ejecutará `notify()` el cual llamará al método `update()` de todos sus *observers*. Finalmente este método `update()` se encargará de volver a calcular las estadisticas y almacenar los datos ya actualizados.
